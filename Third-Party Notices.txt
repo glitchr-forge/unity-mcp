@@ -1,0 +1,9 @@
+Glitch Art MCP (io.glitchr.mcp) is a fork of MCP for Unity.
+
+Component: MCP for Unity
+Source:    https://github.com/CoplayDev/unity-mcp
+License:   MIT License
+Copyright: (c) Coplay and the MCP for Unity contributors (see CREDITS.md)
+
+The full text of the MIT License is in the file LICENSE in this package. This fork is distributed under the same
+license. The changes made in this fork are listed at the top of README.md.
