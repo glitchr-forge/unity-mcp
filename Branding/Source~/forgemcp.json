@@ -1,0 +1,34 @@
+{
+ "first": "Forge",
+ "second": "MCP",
+ "join": false,
+ "tagline": "AI assistants inside Unity",
+ "icon": "plug.png",
+ "gradient": [
+  "#ffd23f",
+  "#ff7a1a",
+  "#e0301e"
+ ],
+ "summary": [
+  "Connects the Unity editor to AI assistants:",
+  "they read the project, run its tools",
+  "and see what changed."
+ ],
+ "packageName": "Forge MCP - AI Assistants for Unity",
+ "summaryText": "Forge MCP connects the Unity editor to AI assistants such as Claude Code, Cursor and VS Code: they read the project, run its tools and see what changed.",
+ "background": [
+  "#5a5e66",
+  "#1c1e22"
+ ],
+ "file": "Forge MCP",
+ "logoScale": 1.1,
+ "twoLines": false,
+ "iconTagline": false,
+ "iconBox": [
+  49,
+  66,
+  91
+ ],
+ "anchorX": 11,
+ "iconTwoLines": true
+}
