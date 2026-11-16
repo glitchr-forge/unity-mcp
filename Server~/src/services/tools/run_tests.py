@@ -36,6 +36,42 @@ _NUDGE_STATE_TTL_S = 3600.0
 _MAX_NUDGE_STATES = 256
 _poll_observation_order = count()
 
+# A test run starts with a preflight that may refresh the editor: a recompile and a domain reload, during which the
+# plugin is disconnected. A large project reloads for longer than one session wait (20 s), so the start command came
+# back "no_unity_session" and every retry refreshed and failed again (seen on a project whose reload takes a minute:
+# four tries, none ran).
+# The start is now sent again while the editor is away for a reload, up to this long in all.
+_RELOAD_RETRY_BUDGET_S = 180.0
+_RELOAD_RETRY_REASONS = ("no_unity_session", "stale_connection")
+
+
+def _reload_reason(response: Any) -> str | None:
+    """The reason a response gives for the editor being away (reloading), or None."""
+    if not isinstance(response, dict) or response.get("success", True):
+        return None
+    data = response.get("data")
+    reason = data.get("reason") if isinstance(data, dict) else None
+    return reason if reason in _RELOAD_RETRY_REASONS else None
+
+
+async def _send_through_reloads(unity_instance: str | None, command: str, params: dict[str, Any],
+                                budget_s: float = _RELOAD_RETRY_BUDGET_S) -> Any:
+    """Sends a command, and sends it again while the editor is away for a reload, within `budget_s`."""
+    deadline = time.monotonic() + budget_s
+    attempt = 0
+    while True:
+        attempt += 1
+        response = await unity_transport.send_with_unity_instance(
+            async_send_command_with_retry, unity_instance, command, params)
+        reason = _reload_reason(response)
+        if reason is None or time.monotonic() >= deadline:
+            if reason is not None:
+                logger.warning("%s: the editor did not come back within %.0fs (%s, %d tries)",
+                               command, budget_s, reason, attempt)
+            return response
+        logger.info("%s: the editor is away (%s, a reload?); sending again (try %d)", command, reason, attempt + 1)
+        await asyncio.sleep(2.0)
+
 
 @dataclass
 class _JobNudgeState:
@@ -403,12 +439,7 @@ async def run_tests(
     if init_timeout is not None and init_timeout > 0:
         params["initTimeout"] = init_timeout
 
-    response = await unity_transport.send_with_unity_instance(
-        async_send_command_with_retry,
-        unity_instance,
-        "run_tests",
-        params,
-    )
+    response = await _send_through_reloads(unity_instance, "run_tests", params)
 
     if isinstance(response, dict):
         if not response.get("success", True):
