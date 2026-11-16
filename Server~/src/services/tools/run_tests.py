@@ -385,7 +385,7 @@ async def run_tests(
                                "Include details for all tests (default: false)"] = False,
     init_timeout: Annotated[int | None,
                             "Initialization timeout in milliseconds. PlayMode tests may need longer "
-                            "due to domain reload (default: 15000). Recommended: 120000 for PlayMode."] = None,
+                            "due to domain reload (default: 60000). Recommended: 120000 for PlayMode."] = None,
     clear_stuck: Annotated[bool,
                            "Clear an orphaned running job instead of starting a run. Use when a job "
                            "was lost to a domain reload and is blocking every subsequent run."] = False,

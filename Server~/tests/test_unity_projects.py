@@ -171,3 +171,10 @@ async def test_unity_instance_accepts_a_project_folder(tmp_path, monkeypatch):
     assert await middleware._resolve_instance_value(str(p) + "/", None) == "Game@abc"
     with pytest.raises(ValueError, match="No connected Unity instance"):
         await middleware._resolve_instance_value(str(tmp_path / "Nowhere"), None)
+
+
+def test_only_forge_servers_are_stopped():
+    import forge_cli
+    assert forge_cli.is_forge_server("/u/python -c import sys; sys.argv[0]='mcp-for-unity --transport'; from main import main; main() --transport http")
+    assert forge_cli.is_forge_server("/u/python -m forge_cli serve --http-url http://127.0.0.1:8080")
+    assert not forge_cli.is_forge_server("/usr/bin/python3 -m http.server 8080")

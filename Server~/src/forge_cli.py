@@ -20,7 +20,9 @@ from __future__ import annotations
 import json
 import os
 import plistlib
+import signal
 import subprocess
+import time
 import sys
 import urllib.request
 from pathlib import Path
@@ -87,6 +89,35 @@ def _reachable(http_url: str) -> bool:
         return False
 
 
+def _listeners(http_url: str) -> list[int]:
+    """The processes listening on the URL's port."""
+    port = http_url.rsplit(":", 1)[-1].split("/")[0]
+    out = subprocess.run(["lsof", "-nP", f"-iTCP:{port}", "-sTCP:LISTEN", "-t"], capture_output=True, text=True).stdout
+    return [int(p) for p in out.split() if p.isdigit()]
+
+
+def is_forge_server(command: str) -> bool:
+    """Whether a process's command line is a Forge MCP server (the package's entry points, however launched)."""
+    return any(mark in command for mark in ("mcp-for-unity", "forge_cli", "from main import main"))
+
+
+def _stop_server(http_url: str, timeout: float = 15) -> list[int]:
+    """Stops the Forge MCP server answering on the URL; refuses a process that is not one."""
+    stopped = []
+    for pid in _listeners(http_url):
+        command = subprocess.run(["ps", "-o", "command=", "-p", str(pid)], capture_output=True, text=True).stdout.strip()
+        if not is_forge_server(command):
+            raise click.ClickException(f"Port is held by pid {pid}, which is not a Forge MCP server ({command[:80]}); not stopping it.")
+        os.kill(pid, signal.SIGTERM)
+        stopped.append(pid)
+    deadline = time.monotonic() + timeout
+    while _reachable(http_url) and time.monotonic() < deadline:
+        time.sleep(0.5)
+    if _reachable(http_url):
+        raise click.ClickException(f"The server on {http_url} did not stop in {timeout:.0f} s.")
+    return stopped
+
+
 @main.group()
 def service() -> None:
     """The server as a login service (macOS), running whether or not Unity is open."""
@@ -94,12 +125,16 @@ def service() -> None:
 
 @service.command("install")
 @click.option("--http-url", default=DEFAULT_URL, show_default=True)
-def service_install(http_url: str) -> None:
-    """Install and start the service (a server already answering on the URL must be stopped first)."""
+@click.option("--replace", is_flag=True, help="Stop the Forge MCP server already answering on the URL (editors reconnect).")
+def service_install(http_url: str, replace: bool) -> None:
+    """Install and start the service (a server already answering on the URL is replaced with --replace)."""
     if sys.platform != "darwin":
         raise click.ClickException("The service is a macOS launchd agent; elsewhere run `forge-mcp serve` from your startup.")
     if _reachable(http_url) and _launchctl("print", f"gui/{os.getuid()}/{LABEL}").returncode != 0:
-        raise click.ClickException(f"A server already answers on {http_url} (started by an editor or by hand): stop it, then install.")
+        if not replace:
+            raise click.ClickException(f"A server already answers on {http_url} (started by an editor or by hand): "
+                                       "`forge-mcp service install --replace` stops it and installs the service in its place.")
+        click.echo(f"Stopped the server on {http_url} (pid {', '.join(map(str, _stop_server(http_url)))}).")
     projects.log_folder().mkdir(parents=True, exist_ok=True)
     plist_path().parent.mkdir(parents=True, exist_ok=True)
     _launchctl("bootout", f"gui/{os.getuid()}/{LABEL}")

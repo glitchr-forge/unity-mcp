@@ -57,7 +57,10 @@ namespace ForgeMCP.Editor.Services
         private const int FailureCap = 25;
         internal const string InitializationTimeoutError = "Test job failed to initialize (tests did not start within timeout)";
         private const long StuckThresholdMs = 60_000;
-        private const long DefaultInitializationTimeoutMs = 15_000; // 15 seconds default; override per-job via run_tests init_timeout param
+        // 60 seconds by default (override per job with run_tests' init_timeout). It was 15: a large project's editor
+        // holds its main thread for 30 s and more at times (an import, a reload), and runs that would have started were
+        // failed as "did not start within timeout".
+        private const long DefaultInitializationTimeoutMs = 60_000;
         private const long MaxInitializationTimeoutMs = 600_000; // 10 minutes hard cap
         private const int MaxJobsToKeep = 10;
         private const long MinPersistIntervalMs = 1000; // Throttle persistence to reduce overhead
@@ -603,7 +606,7 @@ namespace ForgeMCP.Editor.Services
 
                 // Check if job is stuck in "running" state without having called OnRunStarted (TotalTests still null).
                 // This happens when tests fail to initialize (e.g., unsaved scene, compilation issues).
-                // After 15 seconds without initialization, auto-fail the job to prevent hanging.
+                // After the init timeout (60 seconds by default) without initialization, auto-fail the job to prevent hanging.
                 if (job.Status == TestJobStatus.Running && job.TotalTests == null)
                 {
                     long now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
