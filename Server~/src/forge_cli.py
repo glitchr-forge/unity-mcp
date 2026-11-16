@@ -125,15 +125,15 @@ def service() -> None:
 
 @service.command("install")
 @click.option("--http-url", default=DEFAULT_URL, show_default=True)
-@click.option("--replace", is_flag=True, help="Stop the Forge MCP server already answering on the URL (editors reconnect).")
-def service_install(http_url: str, replace: bool) -> None:
-    """Install and start the service (a server already answering on the URL is replaced with --replace)."""
+@click.option("--force", is_flag=True, help="Stop the Forge MCP server already answering on the URL (editors reconnect).")
+def service_install(http_url: str, force: bool) -> None:
+    """Install and start the service (a server already answering on the URL is stopped first with --force)."""
     if sys.platform != "darwin":
         raise click.ClickException("The service is a macOS launchd agent; elsewhere run `forge-mcp serve` from your startup.")
     if _reachable(http_url) and _launchctl("print", f"gui/{os.getuid()}/{LABEL}").returncode != 0:
-        if not replace:
+        if not force:
             raise click.ClickException(f"A server already answers on {http_url} (started by an editor or by hand): "
-                                       "`forge-mcp service install --replace` stops it and installs the service in its place.")
+                                       "`forge-mcp service install --force` stops it and installs the service in its place.")
         click.echo(f"Stopped the server on {http_url} (pid {', '.join(map(str, _stop_server(http_url)))}).")
     projects.log_folder().mkdir(parents=True, exist_ok=True)
     plist_path().parent.mkdir(parents=True, exist_ok=True)
