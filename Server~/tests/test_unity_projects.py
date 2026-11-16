@@ -178,3 +178,28 @@ def test_only_forge_servers_are_stopped():
     assert forge_cli.is_forge_server("/u/python -c import sys; sys.argv[0]='mcp-for-unity --transport'; from main import main; main() --transport http")
     assert forge_cli.is_forge_server("/u/python -m forge_cli serve --http-url http://127.0.0.1:8080")
     assert not forge_cli.is_forge_server("/usr/bin/python3 -m http.server 8080")
+
+
+def test_terminate_stops_the_editor_with_sigterm(tmp_path, monkeypatch):
+    p = make_project(tmp_path / "Game")
+    state = {"running": {up.normalize(p): {"pid": 4242, "path": str(p), "headless": False}}, "killed": []}
+    monkeypatch.setattr(up, "running_editors", lambda: state["running"])
+
+    def fake_kill(pid, sig):
+        state["killed"].append((pid, sig))
+        state["running"] = {}
+
+    monkeypatch.setattr(up.os, "kill", fake_kill)
+    result = up.terminate(str(p), timeout=5)
+    assert state["killed"] == [(4242, up.signal.SIGTERM)]
+    assert result["stopped"] is True
+
+
+def test_terminate_refuses_unsaved_scene_backups(tmp_path, monkeypatch):
+    p = make_project(tmp_path / "Game")
+    (p / "Temp/__Backupscenes").mkdir(parents=True)
+    (p / "Temp/__Backupscenes/0.backup").write_text("x")
+    monkeypatch.setattr(up, "running_editors", lambda: {up.normalize(p): {"pid": 1, "path": str(p), "headless": False}})
+    monkeypatch.setattr(up.os, "kill", lambda pid, sig: pytest.fail("must not kill with unsaved work"))
+    with pytest.raises(up.ProjectError, match="unsaved scene changes"):
+        up.terminate(str(p))

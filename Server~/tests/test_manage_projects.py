@@ -89,3 +89,12 @@ def test_close_of_a_closed_project(machine):
 
 def test_run_method_needs_a_method(machine):
     assert "method" in run(action="run_method", project=str(machine.other))["error"]
+
+
+def test_close_of_an_unconnected_editor_needs_force(machine, monkeypatch):
+    other = up.normalize(machine.other)
+    machine.state["running"][other] = {"pid": 33, "path": str(machine.other), "headless": False}
+    assert "force=true" in run(action="close", project=str(machine.other))["error"]
+    monkeypatch.setattr(up, "terminate", lambda project, timeout: {"project": project, "pid": 33, "stopped": True, "message": "stopped"})
+    result = run(action="close", project=str(machine.other), force=True)
+    assert result["success"] and result["data"]["pid"] == 33

@@ -239,14 +239,24 @@ def project_create(path: str, version: str | None, no_forge_mcp: bool, open_afte
 @project.command("close")
 @click.argument("path")
 @click.option("--no-save", is_flag=True, help="Do not save (refused while a scene has unsaved changes).")
+@click.option("--force", is_flag=True, help="Stop an editor that is open but not connected (refused with unsaved-scene backups).")
 @click.option("--http-url", default=DEFAULT_URL, show_default=True)
-def project_close(path: str, no_save: bool, http_url: str) -> None:
+def project_close(path: str, no_save: bool, force: bool, http_url: str) -> None:
     """Close a project's editor through the server (scenes and assets saved first)."""
     key = projects.normalize(path)
     hit = next((f"{i['project']}@{i['hash']}" for i in _instances(http_url)
                 if i.get("project_path") and projects.normalize(i["project_path"]) == key), None)
     if hit is None:
-        raise click.ClickException(f"No editor connected to {http_url} has {path} open.")
+        if projects.running_editors().get(key) is None:
+            _out({"project": path, "closed": True, "message": "not open"})
+            return
+        if not force:
+            raise click.ClickException(f"{path} is open but not connected to {http_url}: close it in Unity, or use --force.")
+        try:
+            _out(projects.terminate(path))
+        except projects.ProjectError as e:
+            raise click.ClickException(str(e))
+        return
     from cli.utils.config import CLIConfig
     from cli.utils.connection import run_command
     host, _, port = http_url.split("://", 1)[-1].partition(":")

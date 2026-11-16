@@ -14,6 +14,7 @@ import json
 import os
 import platform
 import re
+import signal
 import subprocess
 import time
 from dataclasses import dataclass, field
@@ -310,6 +311,32 @@ def tail(log: str | os.PathLike, lines: int = 30) -> str:
         return "\n".join(Path(log).read_text(encoding="utf-8", errors="replace").splitlines()[-lines:])
     except OSError:
         return ""
+
+
+def unsaved_backups(project: str) -> list[str]:
+    """The scene backups Unity keeps while a scene has unsaved changes (Temp/__Backupscenes): a sign of unsaved work."""
+    folder = Path(project) / "Temp/__Backupscenes"
+    try:
+        return sorted(p.name for p in folder.iterdir() if p.is_file())
+    except OSError:
+        return []
+
+
+def terminate(project: str, timeout: float = 60) -> dict:
+    """Stops the editor that has a project open when it cannot be asked to quit (not connected): SIGTERM, which
+    Unity takes as a request to exit, then a wait for it to go. Refused while Unity keeps unsaved-scene backups."""
+    project = os.path.realpath(os.path.expanduser(project))
+    running = running_editors().get(normalize(project))
+    if running is None:
+        return {"project": project, "stopped": False, "message": "not open"}
+    backups = unsaved_backups(project)
+    if backups:
+        raise ProjectError(f"{project} has unsaved scene changes (Temp/__Backupscenes: {', '.join(backups)}); "
+                           "save them in Unity, or close it there.")
+    os.kill(running["pid"], signal.SIGTERM)
+    closed = wait_until_closed(project, timeout)
+    return {"project": project, "pid": running["pid"], "stopped": closed,
+            "message": "stopped" if closed else f"pid {running['pid']} is still running after {timeout:.0f} s"}
 
 
 def wait_until_closed(project: str, timeout: float = 120, poll: float = 1.0) -> bool:

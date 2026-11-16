@@ -57,7 +57,8 @@ async def _wait_connected(project: str, timeout: float) -> str | None:
         "instance, also addressable by the project's path in any tool's unity_instance. create: a new project at "
         "`project` (a new or empty folder) made by Unity `version` (default: the newest installed), Forge MCP added to "
         "its packages; open=true then opens it. close: quit the project's editor (scenes and assets saved first unless "
-        "save=false, which refuses while a scene has unsaved changes) and wait for it to exit. run_method: run one "
+        "save=false, which refuses while a scene has unsaved changes) and wait for it to exit; an editor running but not "
+        "connected is refused unless force=true, which stops it gently (SIGTERM, refused while Unity keeps unsaved-scene backups). run_method: run one "
         "static editor method (Namespace.Class.Method) on a closed project in batch mode, Unity quitting after it; "
         "returns the exit code and the log's end. Unity opens a project once at a time: open and run_method refuse a "
         "project already open."
@@ -72,6 +73,7 @@ async def manage_projects(
     headless: Annotated[bool, "For open: batch mode, no window (the editor stays open and connects). Default false."] | None = None,
     method: Annotated[str, "For run_method: the static method to execute, Namespace.Class.Method."] | None = None,
     save: Annotated[bool, "For close: save open scenes and assets first (default true)."] | None = None,
+    force: Annotated[bool, "For close: stop an editor that is running but not connected (SIGTERM), refused while it has unsaved-scene backups."] | None = None,
     open: Annotated[bool, "For create: open the new project afterwards (its window, or headless when headless=true)."] | None = None,
     timeout: Annotated[float, "Seconds to wait: open (for the connection, default 300), create (default 900), close (default 120), run_method (default 1800)."] | None = None,
 ) -> dict[str, Any]:
@@ -132,7 +134,11 @@ async def manage_projects(
                 running = projects.running_editors().get(key)
                 if running is None:
                     return {"success": True, "message": f"{project} is not open."}
-                return {"success": False, "error": f"{project} is open (pid {running['pid']}) but not connected; close it from Unity."}
+                if not force:
+                    return {"success": False, "error": f"{project} is open (pid {running['pid']}) but not connected: "
+                            "close it from Unity, or call close with force=true to stop it."}
+                result = await asyncio.to_thread(projects.terminate, project, timeout or 60)
+                return {"success": result["stopped"], "message": f"{project}: {result['message']}.", "data": result}
             params = {"action": "quit"}
             if save is not None:
                 params["save"] = save
