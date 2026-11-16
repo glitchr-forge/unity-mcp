@@ -46,7 +46,7 @@ The pre-commit hook regenerates `website/docs/reference/` whenever you touch a t
 ## Code Style
 
 - **Python:** type hints required; follow the patterns in existing `manage_*.py` files.
-- **C#:** match existing namespace conventions under `MCPForUnity.Editor.*`; route Unity API differences through `MCPForUnity/Runtime/Helpers/Unity*Compat.cs` shims rather than `#if UNITY_*_OR_NEWER` blocks.
+- **C#:** match existing namespace conventions under `ForgeMCP.Editor.*`; route Unity API differences through `MCPForUnity/Runtime/Helpers/Unity*Compat.cs` shims rather than `#if UNITY_*_OR_NEWER` blocks.
 - **Markdown:** wrap at sensible widths; use sentence case in headings.
 
 ## Areas That Need Help

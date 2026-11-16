@@ -2,9 +2,10 @@ using System;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Tools
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for RunTests tool functionality.
@@ -18,8 +19,8 @@ namespace MCPForUnityTests.Editor.Tools
         {
             // Arrange: Force TestJobManager into a "busy" state without starting a real run.
             // We do this via reflection because TestJobManager is internal.
-            var asm = typeof(MCPForUnity.Editor.Services.MCPServiceLocator).Assembly;
-            var testJobManagerType = asm.GetType("MCPForUnity.Editor.Services.TestJobManager");
+            var asm = typeof(ForgeMCP.Editor.Services.MCPServiceLocator).Assembly;
+            var testJobManagerType = asm.GetType("ForgeMCP.Editor.Services.TestJobManager");
             Assert.NotNull(testJobManagerType, "Could not locate TestJobManager type via reflection");
 
             var currentJobIdField = testJobManagerType.GetField("_currentJobId", BindingFlags.NonPublic | BindingFlags.Static);
@@ -30,7 +31,7 @@ namespace MCPForUnityTests.Editor.Tools
 
             try
             {
-                var resultObj = MCPForUnity.Editor.Tools.RunTests.HandleCommand(new JObject()).GetAwaiter().GetResult();
+                var resultObj = ForgeMCP.Editor.Tools.RunTests.HandleCommand(new JObject()).GetAwaiter().GetResult();
 
                 Assert.IsInstanceOf<ErrorResponse>(resultObj);
                 var err = (ErrorResponse)resultObj;
@@ -51,7 +52,7 @@ namespace MCPForUnityTests.Editor.Tools
         [Test]
         public void HandleCommand_WithInvalidMode_ReturnsError()
         {
-            var resultObj = MCPForUnity.Editor.Tools.RunTests.HandleCommand(new JObject
+            var resultObj = ForgeMCP.Editor.Tools.RunTests.HandleCommand(new JObject
             {
                 ["mode"] = "NotARealMode"
             }).GetAwaiter().GetResult();

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Models;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Clients.Configurators
+namespace ForgeMCP.Editor.Clients.Configurators
 {
     public class ClaudeDesktopConfigurator : JsonFileMcpConfigurator
     {

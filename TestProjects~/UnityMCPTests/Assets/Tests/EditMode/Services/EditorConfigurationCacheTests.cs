@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Unit tests for EditorConfigurationCache.

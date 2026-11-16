@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEditorInternal;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Compiles without the focus. Unity notices changed files when its window is focused or when a refresh is asked

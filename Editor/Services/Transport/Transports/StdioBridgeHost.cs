@@ -7,19 +7,19 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.Prefabs;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.Prefabs;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services.Transport.Transports
+namespace ForgeMCP.Editor.Services.Transport.Transports
 {
     class QueuedCommand
     {

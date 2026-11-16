@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Tools.Fixtures
+namespace ForgeMCPTests.Editor.Tools.Fixtures
 {
     // NOTE: File name matches class name so Unity can resolve a MonoScript asset for this ScriptableObject type.
     public class ManageScriptableObjectTestDefinitionBase : ScriptableObject

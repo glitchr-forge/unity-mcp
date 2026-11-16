@@ -4,10 +4,10 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// ISOLATED TEST: Array format [0, 0] for float property

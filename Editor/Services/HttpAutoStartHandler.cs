@@ -1,13 +1,13 @@
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Windows;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Automatically starts the HTTP MCP bridge on editor load when the user has opted in

@@ -1,10 +1,10 @@
 using System.IO;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services.Server;
+using ForgeMCP.Editor.Services.Server;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Services.Server
+namespace ForgeMCPTests.Editor.Services.Server
 {
     /// <summary>
     /// Unit tests for PidFileManager component.

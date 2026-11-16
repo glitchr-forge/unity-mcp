@@ -1,9 +1,9 @@
 using System;
-using MCPForUnity.Editor.Tools.Build;
+using ForgeMCP.Editor.Tools.Build;
 using NUnit.Framework;
 using UnityEditor;
 
-namespace MCPForUnity.Tests.EditMode.Tools
+namespace ForgeMCP.Tests.EditMode.Tools
 {
     [TestFixture]
     public class BuildTargetMappingTests

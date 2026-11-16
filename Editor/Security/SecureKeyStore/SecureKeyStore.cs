@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// Entry point for at-rest provider key storage. Selects the best OS secure store for

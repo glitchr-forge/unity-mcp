@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Dependencies;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Windows.Components.Branding;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Dependencies;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Windows.Components.Branding;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows
+namespace ForgeMCP.Editor.Windows
 {
     /// <summary>
     /// Setup window for checking and guiding dependency installation
@@ -179,7 +179,7 @@ namespace MCPForUnity.Editor.Windows
             }
             if (clientToggles.Count == 0)
             {
-                clientsList.Add(new Label("No supported MCP clients detected on this machine. You can configure clients later from Tools → MCP for Unity."));
+                clientsList.Add(new Label("No supported MCP clients detected on this machine. You can configure clients later from Window → Forge MCP."));
                 configureSelectedButton.SetEnabled(false);
             }
         }
@@ -352,13 +352,13 @@ namespace MCPForUnity.Editor.Windows
             // Update overall status
             if (_dependencyResult.IsSystemReady)
             {
-                statusMessage.text = "✓ All requirements met! MCP for Unity is ready to use.";
+                statusMessage.text = "✓ All requirements met! Forge MCP is ready to use.";
                 statusMessage.style.color = new StyleColor(Color.green);
                 installationSection.style.display = DisplayStyle.None;
             }
             else
             {
-                statusMessage.text = "⚠ Missing dependencies. MCP for Unity requires all dependencies to function.";
+                statusMessage.text = "⚠ Missing dependencies. Forge MCP requires all dependencies to function.";
                 statusMessage.style.color = new StyleColor(new Color(1f, 0.6f, 0f)); // Orange
                 installationSection.style.display = DisplayStyle.Flex;
                 installationInstructions.text = DependencyManager.GetInstallationRecommendations();

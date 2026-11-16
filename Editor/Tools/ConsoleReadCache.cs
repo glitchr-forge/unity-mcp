@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// The last answers of read_console, kept so that the same question asked again of a console that has not

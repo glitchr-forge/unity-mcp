@@ -1,3 +1,5 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 #nullable disable
 using System;
 using System.Collections.Generic;
@@ -6,19 +8,19 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Captures ANY open editor window to a PNG on disk — Inspector, Console, Game view, or a custom package
     /// EditorWindow — via the same GrabPixels path the Scene view uses, so it records the window's real
     /// on-screen pixels (IMGUI, UI Toolkit, gizmos, all). Focuses the window and forces an IMMEDIATE repaint
     /// first, so even a docked BACKGROUND tab is brought to front and drawn before the grab.
-    /// Part of the package (it came from the Glitch Art Toolkit's MCP extensions): a generic action, for any project.
+    /// Part of the package (it came from the Forge Toolkit's MCP extensions): a generic action, for any project.
     /// </summary>
     [McpForUnityTool(
         name: "capture_editor_window",

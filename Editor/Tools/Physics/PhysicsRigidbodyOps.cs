@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Physics
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Physics
 {
     internal static class PhysicsRigidbodyOps
     {

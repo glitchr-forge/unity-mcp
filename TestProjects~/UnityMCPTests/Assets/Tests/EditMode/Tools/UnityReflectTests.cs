@@ -1,8 +1,9 @@
 using NUnit.Framework;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnityTests.Editor.Tools
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Tools
 {
     [TestFixture]
     public class UnityReflectTests

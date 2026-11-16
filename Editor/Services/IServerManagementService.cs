@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Interface for server management operations

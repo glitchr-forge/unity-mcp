@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tools.Profiler
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Profiler
 {
     internal static class FrameDebuggerOps
     {

@@ -2,11 +2,11 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using MCPForUnity.Editor.Dependencies.PlatformDetectors;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Dependencies.PlatformDetectors;
+using ForgeMCP.Editor.Helpers;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     /// <summary>
     /// Covers the Windows interpreter-discovery path that pyenv-win exposed: batch shims have to be

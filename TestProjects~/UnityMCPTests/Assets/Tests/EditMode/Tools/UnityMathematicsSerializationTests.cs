@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -56,7 +56,7 @@ namespace Unity.Mathematics
     }
 }
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class UnityMathematicsSerializationTests
     {

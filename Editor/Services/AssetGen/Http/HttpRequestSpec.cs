@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Http
+namespace ForgeMCP.Editor.Services.AssetGen.Http
 {
     /// <summary>
     /// Transport-agnostic description of a single HTTP request. Provider adapters build one

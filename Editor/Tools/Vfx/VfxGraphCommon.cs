@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 #endif
 
-namespace MCPForUnity.Editor.Tools.Vfx
+namespace ForgeMCP.Editor.Tools.Vfx
 {
     /// <summary>
     /// Common utilities for VFX Graph operations.

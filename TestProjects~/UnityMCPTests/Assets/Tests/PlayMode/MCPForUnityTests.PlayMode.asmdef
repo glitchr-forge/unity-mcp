@@ -1,5 +1,5 @@
 {
-  "name": "MCPForUnityTests.PlayMode",
+  "name": "ForgeMCPTests.PlayMode",
   "rootNamespace": "",
   "references": [
     "UnityEngine.TestRunner",

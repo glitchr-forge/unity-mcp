@@ -1,10 +1,10 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Tests for the auto-start tick decisions (#1229): the session latch must only be

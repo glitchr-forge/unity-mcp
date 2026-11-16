@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Provides common utility methods for working with Unity asset paths.

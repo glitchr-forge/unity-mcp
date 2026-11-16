@@ -5,16 +5,16 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Windows.Components.AssetGen;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Windows.Components.AssetGen;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 
-namespace MCPForUnityTests.Editor.Blender
+namespace ForgeMCPTests.Editor.Blender
 {
     /// <summary>
     /// Drives the Blender Bridge panel built from the real UXML: the addon status line, the optional

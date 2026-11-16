@@ -3,7 +3,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 
-namespace MCPForUnity.Editor.Helpers
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Unified parameter validation and extraction wrapper for MCP tools.

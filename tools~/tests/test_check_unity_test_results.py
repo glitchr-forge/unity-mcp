@@ -19,7 +19,7 @@ UNITY_CLEAN_RUN = (
 )
 # Beta run 29283113713 (6000.0.75f1), before #1294 moved ManageGraphicsTests off Assume.That.
 UNITY_INCONCLUSIVE_RUN = '''<test-run id="2" testcasecount="1166" result="Skipped:Ignored" total="1166" passed="1100" failed="0" inconclusive="18" skipped="48" asserts="0" engine-version="3.5.0.0">
-  <test-case fullname="MCPForUnityTests.Editor.Tools.ManageGraphicsTests.FeatureAdd_InvalidType_ReturnsError" result="Inconclusive">
+  <test-case fullname="ForgeMCPTests.Editor.Tools.ManageGraphicsTests.FeatureAdd_InvalidType_ReturnsError" result="Inconclusive">
     <reason><message><![CDATA[URP not available — skipping.
 ::error::injected]]></message></reason>
   </test-case></test-run>'''
@@ -61,7 +61,7 @@ def test_inconclusive_tests_fail_and_are_named(tmp_path, outcome):
     result = run_gate(tmp_path, UNITY_INCONCLUSIVE_RUN, outcome)
     assert result.returncode == 1, result.stdout
     assert "18 inconclusive, 48 skipped (total: 1166)" in result.stdout
-    assert "::error title=Inconclusive: MCPForUnityTests.Editor.Tools.ManageGraphicsTests" in result.stdout
+    assert "::error title=Inconclusive: ForgeMCPTests.Editor.Tools.ManageGraphicsTests" in result.stdout
     assert "URP not available" in result.stdout
     assert "use Assert.Ignore" in result.stdout
     assert "\n::error::injected" not in result.stdout

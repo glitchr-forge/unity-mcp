@@ -2,9 +2,9 @@ using System;
 using System.Reflection;
 using NUnit.Framework;
 using UnityEngine;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for ManageScript delimiter-checking and token-finding logic,

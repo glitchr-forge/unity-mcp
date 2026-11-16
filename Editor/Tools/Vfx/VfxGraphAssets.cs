@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 #endif
 
-namespace MCPForUnity.Editor.Tools.Vfx
+namespace ForgeMCP.Editor.Tools.Vfx
 {
     /// <summary>
     /// Asset management operations for VFX Graph.

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Covers the curated model catalog: the four audio models + metadata, per-kind/per-provider

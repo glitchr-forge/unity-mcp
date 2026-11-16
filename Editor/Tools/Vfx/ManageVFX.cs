@@ -1,8 +1,9 @@
+using MCPForUnity.Editor.Tools;
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEngine;
 using UnityEditor;
 
@@ -10,7 +11,7 @@ using UnityEditor;
 using UnityEngine.VFX;
 #endif
 
-namespace MCPForUnity.Editor.Tools.Vfx
+namespace ForgeMCP.Editor.Tools.Vfx
 {
     /// <summary>
     /// Tool for managing Unity VFX components:

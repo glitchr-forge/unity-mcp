@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// Windows Credential Manager-backed key store (DPAPI-protected by the OS) via advapi32

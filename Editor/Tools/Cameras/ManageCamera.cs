@@ -1,8 +1,10 @@
 using System;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Cameras
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Cameras
 {
     [McpForUnityTool("manage_camera", AutoRegister = false)]
     public static class ManageCamera

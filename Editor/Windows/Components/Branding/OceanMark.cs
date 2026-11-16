@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.Branding
+namespace ForgeMCP.Editor.Windows.Components.Branding
 {
     /// <summary>
     /// The MCP for Unity "Ocean split-cube" brand mark.
@@ -149,12 +149,12 @@ namespace MCPForUnity.Editor.Windows.Components.Branding
         {
             try
             {
-                string root = MCPForUnity.Editor.Helpers.AssetPathUtility.GetMcpPackageRootPath();
+                string root = ForgeMCP.Editor.Helpers.AssetPathUtility.GetMcpPackageRootPath();
                 return UnityEditor.AssetDatabase.LoadAssetAtPath<Texture2D>($"{root}/package-icon.png");
             }
             catch (System.Exception ex)
             {
-                MCPForUnity.Editor.Helpers.McpLog.Warn($"OceanMark: failed to load brand icon fallback: {ex.Message}");
+                ForgeMCP.Editor.Helpers.McpLog.Warn($"OceanMark: failed to load brand icon fallback: {ex.Message}");
                 return null;
             }
         }

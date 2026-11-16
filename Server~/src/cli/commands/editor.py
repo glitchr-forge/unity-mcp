@@ -235,9 +235,9 @@ def set_tool(tool_name: str):
 @editor.command("deploy")
 @handle_unity_errors
 def deploy():
-    """Deploy MCPForUnity package from configured source.
+    """Deploy the Forge MCP package from configured source.
 
-    Copies the configured MCPForUnity source folder into the project's
+    Copies the configured Forge MCP source folder into the project's
     installed package location. The source path must be set in the
     MCP for Unity Advanced Settings first. Triggers recompilation.
 
@@ -255,7 +255,7 @@ def deploy():
 @editor.command("restore")
 @handle_unity_errors
 def restore():
-    """Restore MCPForUnity package from last backup.
+    """Restore the Forge MCP package from last backup.
 
     Reverts the last deployment by restoring from backup.
 

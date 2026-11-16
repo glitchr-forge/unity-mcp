@@ -6,9 +6,10 @@ using UnityEditor.Build.Reporting;
 using UnityEditor.Build;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Build
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Build
 {
     public static class BuildRunner
     {

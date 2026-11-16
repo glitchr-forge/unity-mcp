@@ -540,7 +540,7 @@ class TestLogRedaction:
     @pytest.mark.asyncio
     async def test_warning_on_auth_service_error_does_not_log_key_fragments(self):
         # Assert on the logger call itself rather than captured text: other test modules
-        # reconfigure the "mcp-for-unity-server" logger, which makes caplog order-dependent.
+        # reconfigure the "glitch-art-mcp" logger, which makes caplog order-dependent.
         svc = _make_service()
         ctx, _ = _patched_client(_mock_response(500))
         with patch("services.api_key_service.logger") as mock_logger:

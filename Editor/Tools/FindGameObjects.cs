@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Tool for searching GameObjects in the scene.

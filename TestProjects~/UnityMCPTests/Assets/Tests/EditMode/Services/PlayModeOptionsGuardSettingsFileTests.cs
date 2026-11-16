@@ -1,9 +1,9 @@
 using System.IO;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using NUnit.Framework;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class PlayModeOptionsGuardSettingsFileTests

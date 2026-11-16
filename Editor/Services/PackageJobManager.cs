@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json;
 using UnityEditor;
 using UnityEditor.PackageManager;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     internal enum PackageJobStatus { Running, Succeeded, Failed }
 

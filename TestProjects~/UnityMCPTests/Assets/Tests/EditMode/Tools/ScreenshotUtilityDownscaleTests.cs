@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Rendering;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// DownscaleTexture blitted through a RenderTexture created with the project-default

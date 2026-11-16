@@ -1,8 +1,8 @@
 using System;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Windows;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Service for managing the EditorPrefs window

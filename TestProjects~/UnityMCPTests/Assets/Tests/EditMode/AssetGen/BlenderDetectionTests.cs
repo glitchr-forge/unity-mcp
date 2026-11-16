@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Covers the pure detection core (path list + an exists predicate) deterministically, without

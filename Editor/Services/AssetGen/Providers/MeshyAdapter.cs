@@ -2,13 +2,13 @@ using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Meshy model provider. Text→3D posts a "preview" task to the v2 text-to-3d endpoint (geometry

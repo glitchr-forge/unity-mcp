@@ -1,8 +1,8 @@
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     internal static class JsonUtil
     {

@@ -1,11 +1,11 @@
 using System.Linq;
-using MCPForUnity.Runtime.Serialization;
+using ForgeMCP.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     /// <summary>
     /// Tests for Matrix4x4Converter to ensure it safely serializes matrices

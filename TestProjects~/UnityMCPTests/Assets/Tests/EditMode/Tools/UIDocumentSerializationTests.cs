@@ -4,9 +4,9 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for UIDocument component serialization.

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Build;
 
-namespace MCPForUnity.Editor.Tools.Build
+namespace ForgeMCP.Editor.Tools.Build
 {
     public static class BuildSettingsHelper
     {

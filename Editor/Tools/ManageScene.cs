@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using MCPForUnity.Editor.Helpers; // For Response class
-using MCPForUnity.Runtime.Helpers; // For ScreenshotUtility
+using ForgeMCP.Editor.Helpers; // For Response class
+using ForgeMCP.Runtime.Helpers; // For ScreenshotUtility
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Handles scene management operations like loading, saving, creating, and querying hierarchy.

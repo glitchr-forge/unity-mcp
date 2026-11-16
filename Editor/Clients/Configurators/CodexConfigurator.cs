@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Models;
 
-namespace MCPForUnity.Editor.Clients.Configurators
+namespace ForgeMCP.Editor.Clients.Configurators
 {
     public class CodexConfigurator : CodexMcpConfigurator
     {

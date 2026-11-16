@@ -1,10 +1,10 @@
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Phase 0 scaffold: non-secret AssetGen preferences round-trip through EditorPrefs

@@ -5,11 +5,11 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
-using MCPForUnity.Editor.Tools;
-using MCPForUnityTests.Editor.Tools.Fixtures;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools;
+using ForgeMCPTests.Editor.Tools.Fixtures;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageScriptableObjectTests
     {

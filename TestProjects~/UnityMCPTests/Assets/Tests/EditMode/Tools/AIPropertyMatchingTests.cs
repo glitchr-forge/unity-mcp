@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class AIPropertyMatchingTests
     {

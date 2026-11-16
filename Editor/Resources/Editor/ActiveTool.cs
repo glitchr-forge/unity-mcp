@@ -1,9 +1,11 @@
 using System;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Resources.Editor
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.Editor
 {
     /// <summary>
     /// Provides information about the currently active editor tool.

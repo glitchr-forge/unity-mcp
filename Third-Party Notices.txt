@@ -1,4 +1,4 @@
-Glitch Art MCP (io.glitchr.mcp) is a fork of MCP for Unity.
+Forge MCP (io.glitchr.mcp) is a fork of MCP for Unity.
 
 Component: MCP for Unity
 Source:    https://github.com/CoplayDev/unity-mcp

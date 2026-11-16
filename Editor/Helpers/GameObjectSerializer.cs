@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Runtime.Serialization; // For Converters
+using ForgeMCP.Runtime.Serialization; // For Converters
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Handles serialization of GameObjects and Components for MCP responses.

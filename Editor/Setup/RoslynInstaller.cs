@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace MCPForUnity.Editor.Setup
+namespace ForgeMCP.Editor.Setup
 {
     public static class RoslynInstaller
     {

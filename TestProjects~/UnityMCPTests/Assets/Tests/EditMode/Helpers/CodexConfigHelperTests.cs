@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.External.Tommy;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.External.Tommy;
+using ForgeMCP.Editor.Services;
 using System.IO;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     public class CodexConfigHelperTests : TransportPreferenceTestBase
     {

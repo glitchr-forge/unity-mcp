@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
-using EditorConfigCache = MCPForUnity.Editor.Services.EditorConfigurationCache;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using EditorConfigCache = ForgeMCP.Editor.Services.EditorConfigurationCache;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     public class WriteToConfigTests : TransportPreferenceTestBase
     {

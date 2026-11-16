@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Utility for persisting tool state across domain reloads. State is stored in

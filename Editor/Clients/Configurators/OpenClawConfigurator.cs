@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Clients.Configurators
+namespace ForgeMCP.Editor.Clients.Configurators
 {
     /// <summary>
     /// Configurator for OpenClaw via the openclaw-mcp-bridge plugin.
@@ -160,8 +160,8 @@ namespace MCPForUnity.Editor.Clients.Configurators
         {
             "Install OpenClaw",
             "Install the bridge plugin: npm install -g openclaw-mcp-bridge (or pnpm add -g openclaw-mcp-bridge)",
-            "In MCP for Unity, choose OpenClaw and click Configure",
-            "OpenClaw uses the currently selected MCP for Unity transport (HTTP or stdio)",
+            "In Forge MCP, choose OpenClaw and click Configure",
+            "OpenClaw uses the currently selected Forge MCP transport (HTTP or stdio)",
             "OpenClaw exposes a proxy tool such as unityMCP__call for Unity MCP access",
             "Restart OpenClaw if the plugin does not hot-reload the new config"
         };

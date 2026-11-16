@@ -286,7 +286,7 @@ async def test_read_console_during_simulated_reload(monkeypatch):
         return {
             "success": True,
             "message": f"Retrieved {call_count[0]} log entries.",
-            "data": ["<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: Auto-discovered 10 tools"]
+            "data": ["<b><color=#2EA3FF>MCP</color></b>: Auto-discovered 10 tools"]
         }
 
     # Patch the async_send_command_with_retry directly

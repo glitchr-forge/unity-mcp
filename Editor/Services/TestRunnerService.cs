@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -14,7 +14,7 @@ using UnityEditor.TestTools.TestRunner.Api;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Restores <see cref="EditorSettings.enterPlayModeOptionsEnabled"/> and

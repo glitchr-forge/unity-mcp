@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Setup
+namespace ForgeMCP.Editor.Setup
 {
     public static class SkillSyncService
     {

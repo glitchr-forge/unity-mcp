@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Animation
+namespace ForgeMCP.Editor.Tools.Animation
 {
     internal static class ClipPresets
     {

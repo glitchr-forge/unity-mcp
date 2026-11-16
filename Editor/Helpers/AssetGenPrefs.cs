@@ -1,13 +1,13 @@
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Per-user, NON-SECRET configuration for the AI Asset Generation feature.
     ///
     /// Provider API keys are never stored here — they live in the OS secure store
-    /// (<see cref="MCPForUnity.Editor.Security.SecureKeyStore"/>). Only UI/behavior
+    /// (<see cref="ForgeMCP.Editor.Security.SecureKeyStore"/>). Only UI/behavior
     /// preferences (selected provider, default format, output folder, normalize toggle,
     /// per-provider enable flags) are kept in EditorPrefs.
     /// </summary>

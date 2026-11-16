@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Tools.ProBuilder
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.ProBuilder
 {
     /// <summary>
     /// Tool for managing Unity ProBuilder meshes for in-editor 3D modeling.

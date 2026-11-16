@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("MCPForUnity.Editor")]
+[assembly: InternalsVisibleTo("MCP.Editor")]
 [assembly: InternalsVisibleTo("MCPForUnityTests.EditMode")]
-[assembly: InternalsVisibleTo("MCPForUnityTests.PlayMode")]
+[assembly: InternalsVisibleTo("ForgeMCPTests.PlayMode")]

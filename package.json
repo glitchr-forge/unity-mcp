@@ -1,7 +1,7 @@
 {
   "name": "io.glitchr.mcp",
   "version": "10.3.0",
-  "displayName": "Glitch Art MCP",
+  "displayName": "Forge MCP",
   "description": "Connects AI assistants (Claude Code, Cursor, VS Code and others) to the Unity Editor through the Model Context Protocol.\n\nA fork of MCP for Unity by Coplay and its contributors (MIT license), with fixes and pull requests that were pending upstream. See CREDITS.md.",
   "unity": "2021.3",
   "documentationUrl": "https://github.com/meiyasan/unity-mcp",
@@ -27,7 +27,13 @@
     "mcp-client"
   ],
   "author": {
-    "name": "Glitch Art",
+    "name": "Forge",
     "url": "https://glitchr.io"
+  },
+  "glitchr": {
+    "namespace": "ForgeMCP.Editor.Welcome",
+    "embed": [
+      "welcome"
+    ]
   }
 }

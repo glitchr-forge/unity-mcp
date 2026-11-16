@@ -2,7 +2,7 @@ using System.Linq;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Vfx
+namespace ForgeMCP.Editor.Tools.Vfx
 {
     internal static class LineRead
     {

@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Security;
+using ForgeMCP.Editor.Security;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Targets the CI-safe EncryptedFileKeyStore directly against a throwaway temp dir

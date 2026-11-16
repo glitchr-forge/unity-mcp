@@ -6,9 +6,9 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Utility class for finding and looking up GameObjects in the scene.

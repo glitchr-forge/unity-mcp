@@ -1,12 +1,14 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 #nullable disable
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Rich editor status over MCP — the bridge-up complement to the heartbeat file.

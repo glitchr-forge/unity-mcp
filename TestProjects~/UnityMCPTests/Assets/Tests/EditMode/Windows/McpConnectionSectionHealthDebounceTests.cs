@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Windows.Components.Connection;
+using ForgeMCP.Editor.Windows.Components.Connection;
 
-namespace MCPForUnityTests.Editor.Windows
+namespace ForgeMCPTests.Editor.Windows
 {
     /// <summary>
     /// Regression tests for the stdio health-verification debounce: a domain reload briefly

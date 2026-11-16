@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// macOS Keychain-backed key store via /usr/bin/security generic passwords.

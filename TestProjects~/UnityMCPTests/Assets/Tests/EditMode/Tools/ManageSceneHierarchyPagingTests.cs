@@ -2,9 +2,9 @@ using NUnit.Framework;
 using System.Reflection;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageSceneHierarchyPagingTests
     {
@@ -121,7 +121,7 @@ namespace MCPForUnityTests.Editor.Tools
         [Test]
         public void EditorWindowScreenshotUtility_SanitizesFileName()
         {
-            var helperType = typeof(ManageScene).Assembly.GetType("MCPForUnity.Editor.Helpers.EditorWindowScreenshotUtility");
+            var helperType = typeof(ManageScene).Assembly.GetType("ForgeMCP.Editor.Helpers.EditorWindowScreenshotUtility");
             Assert.IsNotNull(helperType, "Expected EditorWindowScreenshotUtility type.");
 
             var sanitizeMethod = helperType.GetMethod("SanitizeFileName", BindingFlags.NonPublic | BindingFlags.Static);
@@ -155,7 +155,7 @@ namespace MCPForUnityTests.Editor.Tools
         [Test]
         public void EditorWindowScreenshotUtility_ClampsSceneViewSupersizeToOne()
         {
-            var helperType = typeof(ManageScene).Assembly.GetType("MCPForUnity.Editor.Helpers.EditorWindowScreenshotUtility");
+            var helperType = typeof(ManageScene).Assembly.GetType("ForgeMCP.Editor.Helpers.EditorWindowScreenshotUtility");
             Assert.IsNotNull(helperType, "Expected EditorWindowScreenshotUtility type.");
 
             var normalizeMethod = helperType.GetMethod("NormalizeSceneViewSuperSize", BindingFlags.NonPublic | BindingFlags.Static);

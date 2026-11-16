@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.Compilation;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// What the last script compilation said: whether it failed, and each compiler error and warning with its file

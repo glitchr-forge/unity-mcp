@@ -1,9 +1,9 @@
 using System;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class McpEditorShutdownCleanupTests

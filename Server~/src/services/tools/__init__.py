@@ -11,7 +11,7 @@ from core.logging_decorator import log_execution
 from utils.module_discovery import discover_modules
 from services.registry import get_registered_tools, TOOL_GROUPS, DEFAULT_ENABLED_GROUPS
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 # Export decorator and helpers for easy imports within tools
 __all__ = [
@@ -32,7 +32,7 @@ def register_all_tools(mcp: FastMCP, *, project_scoped_tools: bool = True):
     so that new sessions only see the *core* tools (plus always-visible meta-tools).
     Clients can activate additional groups at any time via ``manage_tools``.
     """
-    logger.info("Auto-discovering MCP for Unity Server tools...")
+    logger.info("Auto-discovering Forge MCP server tools...")
     # Dynamic import of all modules in this directory
     tools_dir = Path(__file__).parent
 
@@ -129,11 +129,11 @@ async def sync_tool_visibility_from_unity(
             ):
                 logger.debug(
                     "Unity does not support get_tool_states yet — "
-                    "update the MCPForUnity package to enable tool toggle sync"
+                    "update the Forge MCP package to enable tool toggle sync"
                 )
                 return {
                     "error": "Unity package does not support get_tool_states. "
-                    "Update MCPForUnity to the latest version to enable "
+                    "Update Forge MCP to the latest version to enable "
                     "tool toggle syncing from the Unity Editor GUI.",
                     "unsupported": True,
                 }
@@ -232,7 +232,7 @@ async def sync_tool_visibility_from_unity(
             logger.debug(
                 "Unity response does not include extended tool metadata "
                 "(is_built_in); skipping custom tool registration. "
-                "Update MCPForUnity to enable custom tool sync in stdio mode."
+                "Update Forge MCP to enable custom tool sync in stdio mode."
             )
 
         await PluginHub._record_and_notify_tool_list_change(

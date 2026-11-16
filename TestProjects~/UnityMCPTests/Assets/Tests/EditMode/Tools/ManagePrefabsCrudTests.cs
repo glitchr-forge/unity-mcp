@@ -8,10 +8,10 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.TestTools;
-using MCPForUnity.Editor.Tools.Prefabs;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools.Prefabs;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for Prefab CRUD operations: create_from_gameobject, get_info, get_hierarchy, modify_contents.

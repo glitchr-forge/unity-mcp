@@ -7,7 +7,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Editor-status heartbeat for agents (and humans) working over MCP.

@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// Linux libsecret-backed key store via the `secret-tool` CLI. The secret value is

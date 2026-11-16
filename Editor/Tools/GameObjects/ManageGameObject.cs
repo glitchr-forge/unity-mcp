@@ -1,14 +1,16 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 #nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Editor.Helpers; // For Response class
+using ForgeMCP.Editor.Helpers; // For Response class
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MCPForUnity.Editor.Tools.GameObjects
+namespace ForgeMCP.Editor.Tools.GameObjects
 {
     /// <summary>
     /// Handles GameObject manipulation within the current scene (CRUD, find, components).

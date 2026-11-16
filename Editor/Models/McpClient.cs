@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MCPForUnity.Editor.Models
+namespace ForgeMCP.Editor.Models
 {
     public class McpClient
     {

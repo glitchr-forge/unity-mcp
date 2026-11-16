@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 
-namespace MCPForUnity.Editor.Tools.AssetGen
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.AssetGen
 {
     /// <summary>
     /// Shared action handlers for the generate_* asset tools (audio / image / model). The three tools

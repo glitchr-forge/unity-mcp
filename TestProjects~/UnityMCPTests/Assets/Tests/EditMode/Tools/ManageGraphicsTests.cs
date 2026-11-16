@@ -5,10 +5,10 @@ using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Tools.Graphics;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools.Graphics;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageGraphicsTests
     {

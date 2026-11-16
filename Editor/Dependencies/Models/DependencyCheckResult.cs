@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MCPForUnity.Editor.Dependencies.Models
+namespace ForgeMCP.Editor.Dependencies.Models
 {
     /// <summary>
     /// Result of a comprehensive dependency check

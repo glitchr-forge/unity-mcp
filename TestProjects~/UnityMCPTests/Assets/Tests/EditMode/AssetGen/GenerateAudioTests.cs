@@ -1,14 +1,14 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Tools.AssetGen;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Tools.AssetGen;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     public class GenerateAudioTests
     {

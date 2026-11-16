@@ -1,17 +1,18 @@
+using MCPForUnity.Editor.Helpers;
 #nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Runtime.Serialization;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.GameObjects
+namespace ForgeMCP.Editor.Tools.GameObjects
 {
     internal static class GameObjectComponentHelpers
     {

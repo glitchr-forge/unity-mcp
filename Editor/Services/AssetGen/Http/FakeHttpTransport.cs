@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Http
+namespace ForgeMCP.Editor.Services.AssetGen.Http
 {
     /// <summary>
     /// Test double for <see cref="IHttpTransport"/>. Records every request it is handed and

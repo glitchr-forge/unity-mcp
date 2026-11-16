@@ -23,7 +23,7 @@ from transport.plugin_hub import PluginHub
 from services.tools import get_unity_instance_from_context
 from services.registry import get_registered_tools
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 _DEFAULT_POLL_INTERVAL = 1.0
 _MAX_POLL_SECONDS = 600

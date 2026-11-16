@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools.GameObjects;
+using ForgeMCP.Editor.Tools.GameObjects;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Comprehensive baseline tests for ManageGameObject "delete" action.

@@ -2,13 +2,13 @@ using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Tripo3D model provider. Submits text→3D / image→3D tasks to the OpenAPI task endpoint and

@@ -1,10 +1,10 @@
 using System.IO;
 using System.Text;
-using MCPForUnity.Editor.Services.Blender;
+using ForgeMCP.Editor.Services.Blender;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Blender
+namespace ForgeMCPTests.Editor.Blender
 {
     /// <summary>
     /// Covers the framing-free protocol core (parse-when-complete + status unwrap) without a socket.

@@ -1,3 +1,5 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 using System;
 using System.IO;
 using System.Linq;
@@ -6,8 +8,8 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using System.Threading;
 using System.Security.Cryptography;
 
@@ -21,7 +23,7 @@ using UnityEditor.Compilation;
 #endif
 
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Handles CRUD operations for C# scripts within the Unity project.

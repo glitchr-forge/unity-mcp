@@ -6,24 +6,26 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.Blender;
-using MCPForUnity.Editor.Tools.AssetGen;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.Blender;
+using ForgeMCP.Editor.Tools.AssetGen;
+using ForgeMCP.Runtime.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Blender
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Blender
 {
     /// <summary>
     /// Lets the Unity Editor talk straight to the BlenderMCP addon socket, so a Blender → Unity
     /// handoff is one call (export → import through the shared model pipeline → place → normalize)
     /// instead of an AI-orchestrated multi-step dance. Also drives the Blender Bridge panel in the
-    /// Asset Gen tab and the Window/Glitch Art MCP/Blender Bridge menu. Carries no API keys.
+    /// Asset Gen tab and the Window/Forge MCP/Blender Bridge menu. Carries no API keys.
     /// Socket and git work runs on the thread pool; Unity API calls happen after the await, back on
     /// the editor thread (the bridge awaits handlers on Unity's synchronization context).
     /// </summary>
@@ -37,7 +39,7 @@ namespace MCPForUnity.Editor.Tools.Blender
             { "status", "scene_info", "object_info", "screenshot", "run_python", "import_model", "compare_screenshot", "setup_bloom", "check_updates", "sync_addon" };
 
         private const string NotConfiguredMessage =
-            "The blender-mcp checkout is not set. Open Window > Glitch Art MCP > Generative > Blender Bridge " +
+            "The blender-mcp checkout is not set. Open Window > Forge MCP > Generative > Blender Bridge " +
             "and pick the folder that contains addon.py.";
 
         /// <summary>Entry point for the bridge: validates parameters, dispatches by action, and never throws.</summary>
@@ -772,7 +774,7 @@ print(json.dumps({'path': out, 'bytes': os.path.getsize(out), 'selection_only': 
             string dst = BlenderBridgePrefs.InstalledAddonPath;
             if (!File.Exists(src)) return new ErrorResponse($"addon.py not found in the checkout at {src}.");
             if (dst == null)
-                return new ErrorResponse("Could not locate Blender's user addons directory. Set it in Window > Glitch Art MCP > Generative > Blender Bridge.");
+                return new ErrorResponse("Could not locate Blender's user addons directory. Set it in Window > Forge MCP > Generative > Blender Bridge.");
 
             string srcMd5 = FileMd5(src);
             string dstMd5 = File.Exists(dst) ? FileMd5(dst) : null;

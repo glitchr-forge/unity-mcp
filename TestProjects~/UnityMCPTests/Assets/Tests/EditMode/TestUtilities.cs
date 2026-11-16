@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Services.Transport;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     /// <summary>
     /// Shared test utilities for EditMode tests across the MCP for Unity test suite.
@@ -36,7 +36,7 @@ namespace MCPForUnityTests.Editor
             if (AssetDatabase.IsValidFolder(folderPath))
                 return;
 
-            var sanitized = MCPForUnity.Editor.Helpers.AssetPathUtility.SanitizeAssetPath(folderPath);
+            var sanitized = ForgeMCP.Editor.Helpers.AssetPathUtility.SanitizeAssetPath(folderPath);
             if (string.Equals(sanitized, "Assets", StringComparison.OrdinalIgnoreCase))
                 return;
 

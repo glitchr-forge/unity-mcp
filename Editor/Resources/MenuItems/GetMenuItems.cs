@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Resources.MenuItems
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.MenuItems
 {
     /// <summary>
     /// Provides a simple read-only resource that returns Unity menu items.

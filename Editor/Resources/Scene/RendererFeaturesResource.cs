@@ -1,9 +1,11 @@
 using System;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools.Graphics;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools.Graphics;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Resources.Scene
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.Scene
 {
     [McpForUnityResource("get_renderer_features")]
     public static class RendererFeaturesResource

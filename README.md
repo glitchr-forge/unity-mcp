@@ -1,4 +1,4 @@
-> **Glitch Art MCP** (`io.glitchr.mcp`) is a fork of [MCP for Unity](https://github.com/CoplayDev/unity-mcp) by
+> **Forge MCP** (`io.glitchr.mcp`) is a fork of [MCP for Unity](https://github.com/CoplayDev/unity-mcp) by
 > Coplay and its contributors (MIT; see [CREDITS.md](CREDITS.md)). It is free and stays MIT.
 >
 > **Install:** in Unity, Window > Package Manager > + > Add package from git URL:

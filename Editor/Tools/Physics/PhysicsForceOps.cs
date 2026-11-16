@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Physics
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Physics
 {
     internal static class PhysicsForceOps
     {

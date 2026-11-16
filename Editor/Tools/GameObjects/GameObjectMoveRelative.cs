@@ -1,11 +1,12 @@
-#nullable disable
 using MCPForUnity.Editor.Helpers;
+#nullable disable
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.GameObjects
+namespace ForgeMCP.Editor.Tools.GameObjects
 {
     internal static class GameObjectMoveRelative
     {

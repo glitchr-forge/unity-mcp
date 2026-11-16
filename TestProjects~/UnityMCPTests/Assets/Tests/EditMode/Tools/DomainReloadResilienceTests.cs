@@ -4,10 +4,10 @@ using UnityEngine.TestTools;
 using UnityEditor;
 using System.Collections;
 using System.IO;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for domain reload resilience - ensuring MCP requests succeed even during Unity domain reloads.

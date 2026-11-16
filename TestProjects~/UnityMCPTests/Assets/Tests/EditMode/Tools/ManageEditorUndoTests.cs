@@ -1,10 +1,10 @@
 using NUnit.Framework;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Tests.EditMode.Tools
+namespace ForgeMCP.Tests.EditMode.Tools
 {
     [TestFixture]
     public class ManageEditorUndoTests

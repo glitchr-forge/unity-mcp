@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services.Server
+namespace ForgeMCP.Editor.Services.Server
 {
     /// <summary>
     /// Interface for managing PID files and handshake state for the local HTTP server.

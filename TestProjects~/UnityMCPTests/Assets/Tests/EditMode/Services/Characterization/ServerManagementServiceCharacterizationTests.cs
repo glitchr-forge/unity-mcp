@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Server;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Server;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace MCPForUnityTests.Editor.Services.Characterization
+namespace ForgeMCPTests.Editor.Services.Characterization
 {
     /// <summary>
     /// Characterization tests for ServerManagementService public interface.

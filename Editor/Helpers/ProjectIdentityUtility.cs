@@ -2,11 +2,11 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Provides shared utilities for deriving deterministic project identity information

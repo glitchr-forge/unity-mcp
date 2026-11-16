@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Import
+namespace ForgeMCP.Editor.Services.AssetGen.Import
 {
     /// <summary>
     /// Imports a downloaded audio clip (already under Assets/) and applies AudioImporter settings.

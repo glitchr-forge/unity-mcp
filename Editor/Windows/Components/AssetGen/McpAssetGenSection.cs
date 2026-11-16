@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Import;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Import;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.AssetGen
+namespace ForgeMCP.Editor.Windows.Components.AssetGen
 {
     /// <summary>
     /// Controller for the AI Asset Generation settings tab. This tab is CONFIG ONLY:

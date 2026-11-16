@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Service for checking package updates and version information

@@ -1,13 +1,13 @@
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
-using MCPForUnity.Editor.Clients.Configurators;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Constants;
-using EditorConfigCache = MCPForUnity.Editor.Services.EditorConfigurationCache;
+using ForgeMCP.Editor.Clients.Configurators;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Constants;
+using EditorConfigCache = ForgeMCP.Editor.Services.EditorConfigurationCache;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     // Per-client MCP config-format coverage.
     //

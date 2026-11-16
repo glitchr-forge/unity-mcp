@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services.Transport.Transports
+namespace ForgeMCP.Editor.Services.Transport.Transports
 {
     /// <summary>
     /// Adapts the existing TCP bridge into the transport abstraction.

@@ -3,12 +3,12 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using MCPForUnity.Editor.Tools.Blender;
+using ForgeMCP.Editor.Tools.Blender;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Blender
+namespace ForgeMCPTests.Editor.Blender
 {
     /// <summary>
     /// Parameter validation that happens before any socket or file I/O, plus the export-script

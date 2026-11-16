@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Graphics
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Graphics
 {
     internal static class SkyboxOps
     {

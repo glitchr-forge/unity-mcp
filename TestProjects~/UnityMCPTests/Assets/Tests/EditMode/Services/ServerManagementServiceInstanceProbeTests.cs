@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Parsing of the GET /api/instances response the quit handler uses for its last-one-out check.

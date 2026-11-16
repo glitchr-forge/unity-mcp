@@ -1,13 +1,15 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Import;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Import;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tools.AssetGen
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.AssetGen
 {
     /// <summary>
     /// Import a local 3D model file (already on disk — e.g. exported from Blender/Maya) into the

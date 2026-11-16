@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Services.Transport.Transports;
 
-namespace MCPForUnityTests.Editor.Transport
+namespace ForgeMCPTests.Editor.Transport
 {
     /// <summary>
     /// Regression tests for the Start Session readiness race: stdio StartAsync used to return true

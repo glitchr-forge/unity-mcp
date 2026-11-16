@@ -1,16 +1,16 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Blender;
-using MCPForUnity.Editor.Tools.Blender;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Blender;
+using ForgeMCP.Editor.Tools.Blender;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.AssetGen
+namespace ForgeMCP.Editor.Windows.Components.AssetGen
 {
     /// <summary>
     /// Controller for the "Blender Bridge" block of the Asset Gen tab: addon socket host/port,

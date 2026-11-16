@@ -2,18 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Tools;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Windows.Components.Tools
 {
     /// <summary>
     /// Controller for the Tools section inside the MCP for Unity editor window.
@@ -740,11 +742,11 @@ namespace MCPForUnity.Editor.Windows.Components.Tools
                     string base64 = json["imageBase64"]?.ToString();
                     if (!string.IsNullOrEmpty(base64))
                     {
-                        string folderSpec = MCPForUnity.Editor.Helpers.ScreenshotPreferences.Resolve(null);
+                        string folderSpec = ForgeMCP.Editor.Helpers.ScreenshotPreferences.Resolve(null);
                         string folder;
                         try
                         {
-                            folder = MCPForUnity.Runtime.Helpers.ScreenshotUtility.ResolveFolderAbsolute(folderSpec);
+                            folder = ForgeMCP.Runtime.Helpers.ScreenshotUtility.ResolveFolderAbsolute(folderSpec);
                         }
                         catch (System.InvalidOperationException ex)
                         {
@@ -765,7 +767,7 @@ namespace MCPForUnity.Editor.Windows.Components.Tools
                         string projectRelative = normalizedFile.StartsWith(normalizedRoot, System.StringComparison.OrdinalIgnoreCase)
                             ? normalizedFile.Substring(normalizedRoot.Length)
                             : normalizedFile;
-                        if (MCPForUnity.Runtime.Helpers.ScreenshotUtility.IsUnderAssets(projectRelative))
+                        if (ForgeMCP.Runtime.Helpers.ScreenshotUtility.IsUnderAssets(projectRelative))
                             AssetDatabase.ImportAsset(projectRelative, ImportAssetOptions.ForceSynchronousImport);
 
                         McpLog.Info($"Multiview contact sheet saved to {projectRelative}");

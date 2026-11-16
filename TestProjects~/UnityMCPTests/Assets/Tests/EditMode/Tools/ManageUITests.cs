@@ -6,10 +6,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
-using MCPForUnity.Editor.Tools;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageUITests
     {

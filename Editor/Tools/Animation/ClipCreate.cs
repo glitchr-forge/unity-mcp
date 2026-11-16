@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Runtime.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Animation
+namespace ForgeMCP.Editor.Tools.Animation
 {
     internal static class ClipCreate
     {

@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using Unity.Profiling;
 using Unity.Profiling.LowLevel.Unsafe;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tools.Profiler
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Profiler
 {
     internal static class CounterOps
     {

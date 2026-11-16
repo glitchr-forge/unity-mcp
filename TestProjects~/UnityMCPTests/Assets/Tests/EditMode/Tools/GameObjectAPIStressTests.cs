@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Resources.Scene;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.GameObjects;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Resources.Scene;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.GameObjects;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
-using static MCPForUnityTests.Editor.TestUtilities;
+using static ForgeMCPTests.Editor.TestUtilities;
 using Debug = UnityEngine.Debug;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Stress tests for the GameObject API redesign.

@@ -1,12 +1,12 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Answers "is Unity's main thread alive, and if not, why" without touching the main thread.

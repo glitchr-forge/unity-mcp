@@ -92,7 +92,7 @@ async def manage_tools(
             if result.get("unsupported"):
                 msg = (
                     "The connected Unity Editor does not support tool state syncing yet. "
-                    "Update the MCPForUnity package to the latest version, then try again. "
+                    "Update the Forge MCP package to the latest version, then try again. "
                     "In the meantime, use activate/deactivate actions to toggle groups manually."
                 )
             else:

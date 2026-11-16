@@ -4,14 +4,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Runtime.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     [McpForUnityTool("manage_ui", AutoRegister = false, Group = "ui")]
     public static class ManageUI

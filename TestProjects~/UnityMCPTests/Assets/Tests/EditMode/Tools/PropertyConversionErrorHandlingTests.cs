@@ -4,10 +4,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Tools
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests to reproduce issue #654: PropertyConversion crash causing dispatcher unavailability

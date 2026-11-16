@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.Compilation;
 #endif
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Unified type resolution for Unity types (Components, ScriptableObjects, etc.).

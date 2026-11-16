@@ -1,14 +1,14 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Services.Transport.Transports;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Windows;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Ensures the legacy stdio bridge resumes after domain reloads, mirroring the HTTP handler.

@@ -1,14 +1,14 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.GameObjects;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.GameObjects;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
-using static MCPForUnityTests.Editor.TestUtilities;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class MaterialParameterToolTests
     {
@@ -150,7 +150,7 @@ namespace MCPForUnityTests.Editor.Tools
             var renderer = _sphere.GetComponent<MeshRenderer>();
             int beforeId = renderer.sharedMaterial != null ? renderer.sharedMaterial.GetInstanceID() : 0;
 
-            var data = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(renderer) as System.Collections.Generic.Dictionary<string, object>;
+            var data = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(renderer) as System.Collections.Generic.Dictionary<string, object>;
             Assert.IsNotNull(data, "Serializer should return data.");
 
             int afterId = renderer.sharedMaterial != null ? renderer.sharedMaterial.GetInstanceID() : 0;

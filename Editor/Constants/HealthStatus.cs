@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Constants
+namespace ForgeMCP.Editor.Constants
 {
     /// <summary>
     /// Constants for health check status values.

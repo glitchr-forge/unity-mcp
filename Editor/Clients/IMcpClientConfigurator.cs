@@ -1,6 +1,6 @@
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Models;
 
-namespace MCPForUnity.Editor.Clients
+namespace ForgeMCP.Editor.Clients
 {
     /// <summary>
     /// Contract for MCP client configurators. Each client is responsible for

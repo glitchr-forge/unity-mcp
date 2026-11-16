@@ -22,7 +22,7 @@ import struct
 
 from models.models import UnityInstanceInfo
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 
 class PortDiscovery:

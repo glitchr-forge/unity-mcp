@@ -1,10 +1,10 @@
 using System;
 using System.Reflection;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services.Characterization
+namespace ForgeMCPTests.Editor.Services.Characterization
 {
     /// <summary>
     /// Characterization tests for Editor Services domain.

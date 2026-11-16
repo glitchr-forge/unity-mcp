@@ -1,8 +1,8 @@
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// A generative 3D model provider (Tripo, Meshy, ...). Submit mints a provider-side

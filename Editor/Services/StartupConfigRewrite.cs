@@ -1,12 +1,12 @@
 using System;
 using System.Reflection;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Once per Editor session, sweeps registered configurators and re-runs CheckStatus(attemptAutoRewrite: true)

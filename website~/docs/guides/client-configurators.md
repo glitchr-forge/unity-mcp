@@ -16,9 +16,9 @@ For most clients you just need a small class like this:
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Models;
 
-namespace MCPForUnity.Editor.Clients.Configurators
+namespace ForgeMCP.Editor.Clients.Configurators
 {
     public class MyClientConfigurator : JsonFileMcpConfigurator
     {
@@ -202,7 +202,7 @@ MyClientConfigurator.cs
 Inside, follow the existing pattern (e.g. `CursorConfigurator`, `WindsurfConfigurator`, `KiroConfigurator`):
 
 - **Namespace** must be:
-  - `MCPForUnity.Editor.Clients.Configurators`
+  - `ForgeMCP.Editor.Clients.Configurators`
 - **Class**:
   - `public class MyClientConfigurator : JsonFileMcpConfigurator`
 - **Constructor**:

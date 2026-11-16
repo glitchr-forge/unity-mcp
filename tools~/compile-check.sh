@@ -107,7 +107,7 @@ resolve_ref() {
 }
 
 # ------------------------------------------------------------------ compile ----
-# Output assembly names must be exactly MCPForUnity.Runtime / MCPForUnity.Editor:
+# Output assembly names must be exactly MCP.Runtime / MCP.Editor:
 # Runtime/AssemblyInfo.cs grants InternalsVisibleTo by assembly NAME, so a
 # platform suffix in the filename would make Runtime's internals invisible to Editor.
 compile() {
@@ -153,10 +153,10 @@ compile() {
 
 failed=0
 for platform in $PLATFORMS; do
-  compile MCPForUnity.Runtime "$REPO/Runtime" "$platform" \
+  compile MCP.Runtime "$REPO/Runtime" "$platform" \
     "$REPO/tools~/compile-refs/Runtime.txt" || { failed=1; continue; }
-  compile MCPForUnity.Editor "$REPO/Editor" "$platform" \
-    "$REPO/tools~/compile-refs/Editor.txt" "$OUT/$platform/MCPForUnity.Runtime.dll" || failed=1
+  compile MCP.Editor "$REPO/Editor" "$platform" \
+    "$REPO/tools~/compile-refs/Editor.txt" "$OUT/$platform/MCP.Runtime.dll" || failed=1
 done
 
 [ "$failed" -eq 0 ] || { echo "::error::compile check FAILED"; exit 1; }

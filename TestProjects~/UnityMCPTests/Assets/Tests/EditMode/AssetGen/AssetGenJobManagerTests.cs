@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Drives the real TripoAdapter through FakeHttpTransport and pumps the job state machine
@@ -183,7 +183,7 @@ namespace MCPForUnityTests.Editor.AssetGen
         {
             Environment.SetEnvironmentVariable(FalEnvVar, null); // remove the env key
             string dir = Path.Combine(Path.GetTempPath(), "mcp_jobmgr_audio_nokey_" + Guid.NewGuid().ToString("N"));
-            MCPForUnity.Editor.Security.SecureKeyStore.OverrideForTests(new MCPForUnity.Editor.Security.EncryptedFileKeyStore(dir));
+            ForgeMCP.Editor.Security.SecureKeyStore.OverrideForTests(new ForgeMCP.Editor.Security.EncryptedFileKeyStore(dir));
             try
             {
                 AssetGenJob job = AssetGenJobManager.StartAudioGeneration(AudioReq());
@@ -192,7 +192,7 @@ namespace MCPForUnityTests.Editor.AssetGen
             }
             finally
             {
-                MCPForUnity.Editor.Security.SecureKeyStore.ResetForTests();
+                ForgeMCP.Editor.Security.SecureKeyStore.ResetForTests();
                 try { if (Directory.Exists(dir)) Directory.Delete(dir, true); } catch { }
             }
         }
@@ -306,7 +306,7 @@ namespace MCPForUnityTests.Editor.AssetGen
             Environment.SetEnvironmentVariable(EnvVar, null); // remove the env key
             // Ensure no stored key resolves for tripo by routing through an empty temp store.
             string dir = Path.Combine(Path.GetTempPath(), "mcp_jobmgr_nokey_" + Guid.NewGuid().ToString("N"));
-            MCPForUnity.Editor.Security.SecureKeyStore.OverrideForTests(new MCPForUnity.Editor.Security.EncryptedFileKeyStore(dir));
+            ForgeMCP.Editor.Security.SecureKeyStore.OverrideForTests(new ForgeMCP.Editor.Security.EncryptedFileKeyStore(dir));
             try
             {
                 AssetGenJob job = AssetGenJobManager.StartModelGeneration(Req());
@@ -315,7 +315,7 @@ namespace MCPForUnityTests.Editor.AssetGen
             }
             finally
             {
-                MCPForUnity.Editor.Security.SecureKeyStore.ResetForTests();
+                ForgeMCP.Editor.Security.SecureKeyStore.ResetForTests();
                 try { if (Directory.Exists(dir)) Directory.Delete(dir, true); } catch { }
             }
         }

@@ -5,10 +5,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.GameObjects;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.GameObjects;
 
-namespace MCPForUnityTests.Editor.Tools
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageGameObjectTests
     {
@@ -390,7 +391,7 @@ namespace MCPForUnityTests.Editor.Tools
             object result;
             try
             {
-                result = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
+                result = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
             }
             finally
             {
@@ -431,7 +432,7 @@ namespace MCPForUnityTests.Editor.Tools
             object result;
             try
             {
-                result = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
+                result = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
             }
             finally
             {
@@ -465,7 +466,7 @@ namespace MCPForUnityTests.Editor.Tools
             meshRenderer.sharedMaterial = testMaterial;
             
             // Act - Get component data in edit mode
-            var result = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
+            var result = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
             
             // Assert - Verify that the material property was accessed without instantiation
             Assert.IsNotNull(result, "GetComponentData should return a result");
@@ -499,7 +500,7 @@ namespace MCPForUnityTests.Editor.Tools
             meshFilter.sharedMesh = testMesh;
             
             // Act - Get component data in edit mode
-            var result = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
+            var result = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
             
             // Assert - Verify that the mesh property was accessed without instantiation
             Assert.IsNotNull(result, "GetComponentData should return a result");
@@ -528,8 +529,8 @@ namespace MCPForUnityTests.Editor.Tools
             // Don't set any materials or meshes - they should be null
             
             // Act - Get component data
-            var rendererResult = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
-            var meshFilterResult = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
+            var rendererResult = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
+            var meshFilterResult = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshFilter);
             
             // Assert - Verify that the operations succeeded even with null materials/meshes
             Assert.IsNotNull(rendererResult, "GetComponentData should handle null materials");
@@ -555,7 +556,7 @@ namespace MCPForUnityTests.Editor.Tools
             meshRenderer.sharedMaterials = new Material[] { material1, material2 };
             
             // Act - Get component data
-            var result = MCPForUnity.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
+            var result = ForgeMCP.Editor.Helpers.GameObjectSerializer.GetComponentData(meshRenderer);
             
             // Assert - Verify that the operation succeeded with multiple materials
             Assert.IsNotNull(result, "GetComponentData should handle multiple materials");

@@ -5,17 +5,17 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Setup;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Setup;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.ClientConfig
+namespace ForgeMCP.Editor.Windows.Components.ClientConfig
 {
     /// <summary>
     /// Controller for the Client Configuration section of the MCP for Unity editor window.
@@ -294,6 +294,9 @@ namespace MCPForUnity.Editor.Windows.Components.ClientConfig
                 clientProjectDirRow.style.display = DisplayStyle.None;
             }
         }
+
+        /// <summary>Configures every AI client found on this machine (the page's Connect clients button).</summary>
+        public void ConfigureAllDetectedClients() => OnConfigureAllClientsClicked();
 
         private void OnConfigureAllClientsClicked()
         {

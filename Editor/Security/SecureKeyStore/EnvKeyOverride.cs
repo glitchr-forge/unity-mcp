@@ -1,6 +1,6 @@
 using System;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// Read-only environment-variable override for provider keys, intended for CI/headless

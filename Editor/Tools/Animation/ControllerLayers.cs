@@ -1,10 +1,10 @@
 using System;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEditor.Animations;
 
-namespace MCPForUnity.Editor.Tools.Animation
+namespace ForgeMCP.Editor.Tools.Animation
 {
     internal static class ControllerLayers
     {

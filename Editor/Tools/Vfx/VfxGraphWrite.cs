@@ -1,5 +1,5 @@
 using System;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.VFX;
 #endif
 
-namespace MCPForUnity.Editor.Tools.Vfx
+namespace ForgeMCP.Editor.Tools.Vfx
 {
     /// <summary>
     /// Parameter setter operations for VFX Graph (VisualEffect component).

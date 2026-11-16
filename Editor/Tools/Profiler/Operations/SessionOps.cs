@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.Profiling;
 using UProfiler = UnityEngine.Profiling.Profiler;
 
-namespace MCPForUnity.Editor.Tools.Profiler
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Profiler
 {
     internal static class SessionOps
     {

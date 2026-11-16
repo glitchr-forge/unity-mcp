@@ -1,10 +1,10 @@
 using NUnit.Framework;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Resources.MenuItems;
+using ForgeMCP.Editor.Resources.MenuItems;
 using System;
 using System.Linq;
 
-namespace MCPForUnityTests.Editor.Resources.MenuItems
+namespace ForgeMCPTests.Editor.Resources.MenuItems
 {
     public class GetMenuItemsTests
     {

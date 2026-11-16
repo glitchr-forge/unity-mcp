@@ -1,11 +1,11 @@
 using System.Linq;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Clients.Configurators;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Clients.Configurators;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Clients
+namespace ForgeMCPTests.Editor.Clients
 {
     [TestFixture]
     public class SupportedTransportsTests : TransportPreferenceTestBase

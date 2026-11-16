@@ -1,4 +1,4 @@
-namespace MCPForUnity.Runtime.Helpers
+namespace ForgeMCP.Runtime.Helpers
 {
     /// <summary>
     /// Index of the version-compatibility shims MCP for Unity ships. These wrap Unity APIs

@@ -1,6 +1,6 @@
 using System;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     public interface IPackageDeploymentService
     {

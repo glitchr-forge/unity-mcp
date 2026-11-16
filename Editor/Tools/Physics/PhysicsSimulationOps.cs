@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Physics
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Physics
 {
     internal static class PhysicsSimulationOps
     {

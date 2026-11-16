@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Records that Unity's main thread is alive by stamping a timestamp from

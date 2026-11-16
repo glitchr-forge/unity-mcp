@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -16,7 +16,7 @@ using RunState = UnityEditor.TestTools.TestRunner.Api.RunState;
 using TestMode = UnityEditor.TestTools.TestRunner.Api.TestMode;
 using TestStatus = UnityEditor.TestTools.TestRunner.Api.TestStatus;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Exercises reload recovery without starting a nested Unity test run. The synthetic

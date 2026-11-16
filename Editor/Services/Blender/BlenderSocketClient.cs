@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Services.Blender
+namespace ForgeMCP.Editor.Services.Blender
 {
     /// <summary>Where the BlenderMCP addon socket listens. Captured on the main thread so I/O can run elsewhere.</summary>
     public readonly struct BlenderEndpoint

@@ -1,8 +1,8 @@
 {
-    "name": "MCPForUnity.Editor",
-    "rootNamespace": "MCPForUnity.Editor",
+    "name": "MCP.Editor",
+    "rootNamespace": "ForgeMCP.Editor",
     "references": [
-        "MCPForUnity.Runtime"
+        "MCP.Runtime"
     ],
     "includePlatforms": [
         "Editor"

@@ -1,13 +1,13 @@
 using System.IO;
-using MCPForUnity.Editor.Tools.Prefabs;
+using ForgeMCP.Editor.Tools.Prefabs;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
-using static MCPForUnityTests.Editor.TestUtilities;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManagePrefabsStageTests
     {

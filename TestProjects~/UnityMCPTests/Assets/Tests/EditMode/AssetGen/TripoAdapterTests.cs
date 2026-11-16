@@ -1,10 +1,10 @@
 using System.Text;
 using System.Threading;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Exercises the Tripo adapter against a <see cref="FakeHttpTransport"/> — no network.

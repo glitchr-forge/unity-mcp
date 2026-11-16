@@ -1,11 +1,11 @@
 using System;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.Validation
+namespace ForgeMCP.Editor.Windows.Components.Validation
 {
     /// <summary>
     /// Controller for the Script Validation section.

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Services.AssetGen
+namespace ForgeMCP.Editor.Services.AssetGen
 {
     /// <summary>
     /// Conservative compatibility gate for fal's queue OpenAPI schemas. Only local references

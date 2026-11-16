@@ -1,8 +1,8 @@
 using System;
 using System.Runtime.InteropServices;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnity.Editor.Dependencies
+namespace ForgeMCP.Editor.Dependencies
 {
     /// <summary>
     /// Runs the official uv installer for the current platform. UI-agnostic: build the command,

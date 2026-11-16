@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Animation
+namespace ForgeMCP.Editor.Tools.Animation
 {
     internal static class AnimatorRead
     {

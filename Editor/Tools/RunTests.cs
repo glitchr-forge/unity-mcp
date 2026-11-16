@@ -1,12 +1,14 @@
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Resources.Tests;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Resources.Tests;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json.Linq;
 using UnityEditor.TestTools.TestRunner.Api;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Starts a Unity Test Runner run asynchronously and returns a job id immediately.

@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Sketchfab marketplace provider. Search/preview are read-only GETs returning the raw API

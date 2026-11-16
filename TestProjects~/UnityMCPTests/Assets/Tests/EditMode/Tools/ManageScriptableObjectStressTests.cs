@@ -8,12 +8,12 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
-using MCPForUnity.Editor.Tools;
-using MCPForUnityTests.Editor.Tools.Fixtures;
+using ForgeMCP.Editor.Tools;
+using ForgeMCPTests.Editor.Tools.Fixtures;
 using Debug = UnityEngine.Debug;
-using static MCPForUnityTests.Editor.TestUtilities;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Stress tests for ManageScriptableObject tool.
@@ -640,7 +640,7 @@ namespace MCPForUnityTests.Editor.Tools
             var createResult = ToJObject(ManageScriptableObject.HandleCommand(new JObject
             {
                 ["action"] = "create",
-                ["typeName"] = "MCPForUnityTests.Editor.Tools.Fixtures.ManageScriptableObjectTestDefinition",
+                ["typeName"] = "ForgeMCPTests.Editor.Tools.Fixtures.ManageScriptableObjectTestDefinition",
                 ["folderPath"] = _runRoot,
                 ["assetName"] = "GuidShorthand",
                 ["overwrite"] = true,

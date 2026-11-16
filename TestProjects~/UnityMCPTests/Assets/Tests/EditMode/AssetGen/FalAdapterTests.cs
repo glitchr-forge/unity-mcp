@@ -1,9 +1,9 @@
 using System.Threading;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     public class FalAdapterTests
     {

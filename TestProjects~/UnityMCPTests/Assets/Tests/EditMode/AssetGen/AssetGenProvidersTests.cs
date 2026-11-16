@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Covers the provider factory/registry: Tripo resolves to a real adapter, unimplemented

@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Services.Transport;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Pins TransportManager.StartAsync's coalescing contract: concurrent starts for the

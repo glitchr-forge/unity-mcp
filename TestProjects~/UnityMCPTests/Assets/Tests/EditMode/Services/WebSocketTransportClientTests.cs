@@ -6,16 +6,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Services.Transport.Transports;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class WebSocketTransportClientTests
     {
         private const string CandidateBuilderMethodName = "BuildConnectionCandidateUris";
-        private const string WebSocketTransportClientTypeName = "MCPForUnity.Editor.Services.Transport.Transports.WebSocketTransportClient";
+        private const string WebSocketTransportClientTypeName = "ForgeMCP.Editor.Services.Transport.Transports.WebSocketTransportClient";
         private static readonly MethodInfo BuildConnectionCandidateUrisMethod = ResolveCandidateBuilderMethod();
 
         [Test]

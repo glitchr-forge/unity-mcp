@@ -77,7 +77,7 @@ to finish before another job starts.
 
 ### Adding a Unity test
 
-Mirror the C# tool you're adding. For `ManageNavigation.cs` in `MCPForUnity/Editor/Tools/`, create `TestProjects/UnityMCPTests/Assets/Tests/EditMode/Editor/ManageNavigationTests.cs`. Use the existing assembly definition (`MCPForUnityTests.Editor.asmdef`) so the suite picks it up automatically.
+Mirror the C# tool you're adding. For `ManageNavigation.cs` in `MCPForUnity/Editor/Tools/`, create `TestProjects/UnityMCPTests/Assets/Tests/EditMode/Editor/ManageNavigationTests.cs`. Use the existing assembly definition (`ForgeMCPTests.Editor.asmdef`) so the suite picks it up automatically.
 
 ## Multi-version compile matrix
 

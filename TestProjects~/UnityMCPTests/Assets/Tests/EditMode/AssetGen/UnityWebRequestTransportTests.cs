@@ -1,7 +1,7 @@
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// H1: an auth-bearing request must not follow redirects (UnityWebRequest re-sends the

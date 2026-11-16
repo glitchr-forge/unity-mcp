@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Constants;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     internal static class McpLogRecord
     {

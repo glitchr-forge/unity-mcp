@@ -22,8 +22,8 @@ You can also define a nested `Parameters` class with `[ToolParameter]` attribute
 
 ```csharp
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 
 namespace MyProject.Editor.CustomTools
 {
@@ -97,8 +97,8 @@ unity-mcp editor custom-tool "my_custom_tool" --params '{"param1":"value"}'
 using System.IO;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
 
 namespace MyProject.Editor.CustomTools
 {
@@ -212,8 +212,8 @@ Mark your tool with `RequiresPolling = true` and specify a `PollAction` (typical
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 
 [McpForUnityTool(
     "bake_lightmaps",

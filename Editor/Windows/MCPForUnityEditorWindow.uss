@@ -1,57 +1,10 @@
-/* Root Layout */
-#root-container {
-    padding: 0px;
-    flex-direction: column;
-    flex-grow: 1;
-    overflow: hidden;
-}
+/* Forge MCP's page is the Forge Welcome contract (Editor/Welcome): the card, the buttons and the bars that fold are
+   its own. This sheet styles what the MCP parts hold so they read as the rest of the page: no card inside a card,
+   rows indented as the page's are, buttons as small as Unity's and never the width of the window, colour kept for
+   the state dots. Rules start with .forge-mcp (the page's root) so they win over Common.uss, which every part's
+   UXML also loads. */
 
-/* Header Bar */
-.header-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 18px;
-    margin: 12px 12px 5px 12px;
-    min-height: 44px;
-    flex-shrink: 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.15);
-}
-
-.header-left {
-    flex-direction: row;
-    align-items: center;
-}
-
-.header-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.header-title {
-    font-size: 16px;
-    -unity-font-style: bold;
-    letter-spacing: 0.5px;
-}
-
-.header-version {
-    font-size: 11px;
-    color: rgba(180, 210, 255, 1);
-    padding: 3px 10px;
-    background-color: rgba(50, 120, 200, 0.25);
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgba(80, 150, 220, 0.4);
-    flex-shrink: 0;
-    margin-left: 8px;
-}
-
-/* Update Notification */
+/* ---- Update notice ---------------------------------------------------------------------------------------- */
 .update-notification {
     display: none;
     flex-direction: row;
@@ -59,12 +12,11 @@
     align-items: center;
     justify-content: center;
     padding: 6px 12px;
-    margin: 0px 12px;
+    margin-bottom: 6px;
     background-color: rgba(100, 200, 100, 0.15);
     border-radius: 4px;
     border-width: 1px;
     border-color: rgba(100, 200, 100, 0.3);
-    flex-shrink: 0;
 }
 
 .update-notification.visible {
@@ -76,76 +28,142 @@
     color: rgba(100, 200, 100, 1);
     white-space: normal;
     flex-shrink: 1;
-    overflow: hidden;
     -unity-text-align: middle-center;
 }
 
-/* Tabs */
-.tab-toolbar {
-    margin: 8px 12px 0px 12px;
+/* ---- What the parts hold ---------------------------------------------------------------------------------- */
+.forge-mcp .forge-part {
+    padding: 2px 6px 4px 14px;
+}
+
+/* A part's groups (Server, Clients, Validation...): a small heading and rows, no box round them. */
+.forge-mcp .section {
+    margin: 0px 0px 10px 0px;
     padding: 0px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     border-width: 0px;
-    border-bottom-width: 1px;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
 }
 
-.tab-toolbar .unity-toolbar-button {
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-height: 32px;
+.forge-mcp .section-title {
     font-size: 12px;
-    border-width: 0px;
-    background-color: transparent;
-    margin: 0px 2px 0px 0px;
-    padding: 0px 8px;
-    border-radius: 4px 4px 0px 0px;
-    margin-bottom: -1px;
+    margin: 0px 0px 4px 0px;
+    padding: 0px;
+    border-bottom-width: 0px;
+    letter-spacing: 0px;
 }
 
-.tab-toolbar .unity-toolbar-button:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+.forge-mcp .section-content {
+    padding: 0px 0px 0px 2px;
 }
 
-.tab-toolbar .unity-toolbar-button:checked {
-    background-color: rgba(0, 0, 0, 0.04);
+.forge-mcp .setting-row {
+    min-height: 20px;
+    margin-bottom: 2px;
+}
+
+.forge-mcp .setting-label {
+    min-width: 96px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons: Unity's own, small; colour only says a state (the server running). */
+.forge-mcp .action-button,
+.forge-mcp .secondary-button,
+.forge-mcp .primary-button {
+    width: auto;
+    min-width: 64px;
+    height: 20px;
+    margin: 1px 0px 1px 6px;
+    padding: 0px 10px;
+    font-size: 12px;
+    -unity-font-style: normal;
+    letter-spacing: 0px;
+    border-radius: 3px;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.15);
-    border-bottom-width: 1px;
-    border-bottom-color: rgba(56, 56, 56, 1);
+    color: rgba(238, 238, 238, 1);
+    background-color: rgba(88, 88, 88, 1);
+    border-color: rgba(36, 36, 36, 1);
 }
 
-/* Panels */
-.panel-scroll {
-    flex-grow: 1;
-    margin: 0px;
-    padding: 0px 8px 0px 8px;
+.forge-mcp .action-button:hover,
+.forge-mcp .secondary-button:hover,
+.forge-mcp .primary-button:hover {
+    background-color: rgba(103, 103, 103, 1);
 }
 
-.hidden {
+.forge-mcp .action-button:active,
+.forge-mcp .secondary-button:active,
+.forge-mcp .primary-button:active {
+    background-color: rgba(70, 96, 124, 1);
+}
+
+/* Configure all is the page's own Connect clients button: not shown twice. */
+.forge-mcp #configure-all-button {
     display: none;
 }
 
-.section-stack {
-    flex-direction: column;
+/* The server running: its Stop button tinted, not a red block. */
+.forge-mcp .action-button.server-running {
+    background-color: rgba(120, 66, 60, 1);
+    border-color: rgba(70, 30, 26, 1);
 }
 
-/* Light Theme */
-.unity-theme-light .header-bar {
-    background-color: rgba(0, 0, 0, 0.04);
-    border-color: rgba(0, 0, 0, 0.15);
+.forge-mcp .action-button.server-running:hover {
+    background-color: rgba(140, 78, 70, 1);
 }
 
-.unity-theme-light .header-version {
-    background-color: rgba(0, 0, 0, 0.08);
+.forge-mcp .status-text {
+    font-size: 12px;
 }
 
-.unity-theme-light .tab-toolbar .unity-toolbar-button:checked {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(0, 0, 0, 0.15);
-    border-bottom-color: rgba(194, 194, 194, 1);
+.forge-mcp .client-details-foldout > .unity-foldout__toggle,
+.forge-mcp .manual-config-foldout > .unity-foldout__toggle,
+.forge-mcp .manual-command-foldout > .unity-foldout__toggle {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: -2px;
+    -unity-font-style: normal;
 }
 
+.forge-mcp .client-details-foldout > .unity-foldout__content {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.forge-mcp .manual-config-content {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+}
+
+/* A part with one group: its heading is the bar's already (Tools under Tools). */
+.forge-mcp #tools-container .section-title,
+.forge-mcp #resources-container .section-title,
+.forge-mcp #assetgen-container .section-title {
+    display: none;
+}
+
+/* Enable all, Disable all, Rescan...: small buttons in a row that wraps, not a grid of wide ones. */
+.forge-mcp .tool-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 4px 0px 6px 0px;
+}
+
+.forge-mcp .tool-actions > * {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+
+.forge-mcp .tool-action-button {
+    flex-grow: 0;
+    flex-basis: auto;
+    height: 20px;
+    margin: 1px 4px 1px 0px;
+    padding: 0px 10px;
+    font-size: 12px;
+}
+
+/* ---- Light skin ------------------------------------------------------------------------------------------- */
 .unity-theme-light .update-notification {
     background-color: rgba(100, 200, 100, 0.1);
     border-color: rgba(100, 200, 100, 0.25);
@@ -153,4 +171,27 @@
 
 .unity-theme-dark .update-notification-text {
     color: rgba(150, 255, 150, 1);
+}
+
+.unity-theme-light .forge-mcp .setting-label {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.unity-theme-light .forge-mcp .action-button,
+.unity-theme-light .forge-mcp .secondary-button,
+.unity-theme-light .forge-mcp .primary-button {
+    color: rgba(9, 9, 9, 1);
+    background-color: rgba(228, 228, 228, 1);
+    border-color: rgba(178, 178, 178, 1);
+}
+
+.unity-theme-light .forge-mcp .action-button:hover,
+.unity-theme-light .forge-mcp .secondary-button:hover,
+.unity-theme-light .forge-mcp .primary-button:hover {
+    background-color: rgba(236, 236, 236, 1);
+}
+
+.unity-theme-light .forge-mcp .action-button.server-running {
+    background-color: rgba(232, 196, 190, 1);
+    border-color: rgba(190, 140, 132, 1);
 }

@@ -1,11 +1,11 @@
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Unified property conversion from JSON to Unity types.

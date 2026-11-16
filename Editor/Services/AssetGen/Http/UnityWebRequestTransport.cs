@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine.Networking;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Http
+namespace ForgeMCP.Editor.Services.AssetGen.Http
 {
     /// <summary>
     /// Production <see cref="IHttpTransport"/> backed by UnityWebRequest. Must be invoked on the

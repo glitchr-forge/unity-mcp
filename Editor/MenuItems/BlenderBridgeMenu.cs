@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools.Blender;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools.Blender;
+using ForgeMCP.Editor.Windows;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.MenuItems
+namespace ForgeMCP.Editor.MenuItems
 {
     /// <summary>
     /// Menu entry points that drive the same code path as the blender_bridge tool, so the
@@ -46,7 +46,7 @@ namespace MCPForUnity.Editor.MenuItems
         private static void OpenSettings()
         {
             MCPForUnityEditorWindow.ShowWindow();
-            McpLog.Info("Blender Bridge settings are in the Generative tab of the MCP for Unity window.");
+            McpLog.Info("Blender Bridge settings are in the Generative tab of the Forge MCP window.");
         }
 
         /// <summary>Runs one bridge action and logs its full result.</summary>

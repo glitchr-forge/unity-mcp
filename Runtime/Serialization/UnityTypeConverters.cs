@@ -4,12 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 #if UNITY_EDITOR
 using UnityEditor; // Required for AssetDatabase and EditorUtility
 #endif
 
-namespace MCPForUnity.Runtime.Serialization
+namespace ForgeMCP.Runtime.Serialization
 {
     public class Vector3Converter : JsonConverter<Vector3>
     {

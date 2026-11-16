@@ -1,8 +1,8 @@
 using System;
 using NUnit.Framework;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class CommandRegistryTests
     {

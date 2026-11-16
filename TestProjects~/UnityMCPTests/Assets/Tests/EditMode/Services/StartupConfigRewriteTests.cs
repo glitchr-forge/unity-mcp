@@ -2,7 +2,7 @@ using System.Reflection;
 using NUnit.Framework;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class StartupConfigRewriteTests
@@ -10,7 +10,7 @@ namespace MCPForUnityTests.Editor.Services
         [Test]
         public void StartupConfigRewrite_TypeExists()
         {
-            var t = System.Type.GetType("MCPForUnity.Editor.Services.StartupConfigRewrite, MCPForUnity.Editor");
+            var t = System.Type.GetType("ForgeMCP.Editor.Services.StartupConfigRewrite, MCP.Editor");
             Assert.IsNotNull(t, "StartupConfigRewrite type must exist");
             Assert.IsTrue(t.IsPublic, "StartupConfigRewrite must be public so the [InitializeOnLoad] attribute fires");
         }
@@ -18,7 +18,7 @@ namespace MCPForUnityTests.Editor.Services
         [Test]
         public void StartupConfigRewrite_HasInitializeOnLoad()
         {
-            var t = System.Type.GetType("MCPForUnity.Editor.Services.StartupConfigRewrite, MCPForUnity.Editor");
+            var t = System.Type.GetType("ForgeMCP.Editor.Services.StartupConfigRewrite, MCP.Editor");
             Assert.IsNotNull(t);
             object[] attrs = t.GetCustomAttributes(typeof(InitializeOnLoadAttribute), inherit: false);
             Assert.AreEqual(1, attrs.Length, "Class must be decorated with [InitializeOnLoad]");
@@ -27,7 +27,7 @@ namespace MCPForUnityTests.Editor.Services
         [Test]
         public void StartupConfigRewrite_RunOncePerSession_GuardKey()
         {
-            var t = System.Type.GetType("MCPForUnity.Editor.Services.StartupConfigRewrite, MCPForUnity.Editor");
+            var t = System.Type.GetType("ForgeMCP.Editor.Services.StartupConfigRewrite, MCP.Editor");
             var keyField = t?.GetField("SESSION_GUARD_KEY",
                 BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Public);
             Assert.IsNotNull(keyField);

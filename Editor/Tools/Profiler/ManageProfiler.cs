@@ -1,9 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Tools.Profiler
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Profiler
 {
     [McpForUnityTool("manage_profiler", AutoRegister = false, Group = "profiling")]
     public static class ManageProfiler

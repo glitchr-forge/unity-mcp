@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 
-namespace MCPForUnity.Editor.Services.AssetGen
+namespace ForgeMCP.Editor.Services.AssetGen
 {
     /// <summary>
     /// One selectable model in the Asset Generation panel, plus the metadata the GUI shows

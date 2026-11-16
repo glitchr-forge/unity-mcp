@@ -11,7 +11,7 @@ from typing import Any
 
 import httpx
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 
 @dataclass

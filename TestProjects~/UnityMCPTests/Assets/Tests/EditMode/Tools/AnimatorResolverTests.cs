@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using UnityEngine;
-using MCPForUnity.Editor.Tools.Animation;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools.Animation;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Direct coverage of the resolver every animator read and control response depends on,

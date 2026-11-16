@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Constants
+namespace ForgeMCP.Editor.Constants
 {
     /// <summary>
     /// Centralized list of EditorPrefs keys used by the MCP for Unity package.
@@ -76,7 +76,7 @@ namespace MCPForUnity.Editor.Constants
         internal const string ExecuteCodeCompiler = "MCPForUnity.ExecuteCode.Compiler";
 
         // AI Asset Generation — NON-SECRET config only. Provider API keys live in the OS
-        // secure store (MCPForUnity.Editor.Security.SecureKeyStore), never in EditorPrefs.
+        // secure store (ForgeMCP.Editor.Security.SecureKeyStore), never in EditorPrefs.
         internal const string AssetGenSelectedModelProvider = "MCPForUnity.AssetGen.ModelProvider";
         internal const string AssetGenSelectedImageProvider = "MCPForUnity.AssetGen.ImageProvider";
         internal const string AssetGenSelectedAudioProvider = "MCPForUnity.AssetGen.AudioProvider";

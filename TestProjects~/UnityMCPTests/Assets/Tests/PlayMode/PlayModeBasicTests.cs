@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace MCPForUnityTests.PlayMode
+namespace ForgeMCPTests.PlayMode
 {
     /// <summary>
     /// Basic PlayMode tests to verify the MCP test runner handles PlayMode correctly.

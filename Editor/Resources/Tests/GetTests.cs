@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json.Linq;
 using UnityEditor.TestTools.TestRunner.Api;
 
-namespace MCPForUnity.Editor.Resources.Tests
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.Tests
 {
     /// <summary>
     /// Provides access to Unity tests from the Test Framework with pagination and filtering support.

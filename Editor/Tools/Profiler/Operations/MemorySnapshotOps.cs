@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Profiler
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Profiler
 {
     internal static class MemorySnapshotOps
     {

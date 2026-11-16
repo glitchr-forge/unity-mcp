@@ -1,11 +1,11 @@
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     /// <summary>
     /// Covers the off-main-thread liveness path that lets the bridge report a modal dialog instead

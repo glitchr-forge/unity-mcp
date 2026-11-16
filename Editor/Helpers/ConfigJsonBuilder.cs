@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     public static class ConfigJsonBuilder
     {

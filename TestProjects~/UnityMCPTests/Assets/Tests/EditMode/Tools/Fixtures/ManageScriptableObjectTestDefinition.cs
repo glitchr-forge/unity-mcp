@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Tools.Fixtures
+namespace ForgeMCPTests.Editor.Tools.Fixtures
 {
     [Serializable]
     public struct ManageScriptableObjectNestedData

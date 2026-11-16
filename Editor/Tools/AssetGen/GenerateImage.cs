@@ -1,11 +1,13 @@
 using System;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Tools.AssetGen
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.AssetGen
 {
     /// <summary>
     /// 2D image generation via an aggregator (fal.ai / OpenRouter). Triggered here (never from the

@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 
-namespace MCPForUnity.Editor.Tools.Cameras
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Cameras
 {
     internal static class CameraCreate
     {

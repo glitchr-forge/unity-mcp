@@ -1,13 +1,13 @@
 using System;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Dependencies;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Dependencies;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Windows;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Setup
+namespace ForgeMCP.Editor.Setup
 {
     /// <summary>
     /// Handles automatic triggering of the MCP setup window and exposes menu entry points

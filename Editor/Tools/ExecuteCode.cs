@@ -5,13 +5,15 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Runtime.Helpers;
 using Microsoft.CSharp;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     [McpForUnityTool("execute_code", AutoRegister = false, Group = "scripting_ext")]
     public static class ExecuteCode
@@ -27,7 +29,7 @@ namespace MCPForUnity.Editor.Tools
         private const string CodeDomHint =
             "Compiled with the legacy CodeDom compiler, which does not support C# 8+ syntax (switch expressions, ??=, 'is not'). ";
         private const string CodeDomInstallRoslynHint =
-            CodeDomHint + "Install Roslyn from the Dependencies section of the MCP for Unity window, or use older syntax.";
+            CodeDomHint + "Install Roslyn from the Dependencies section of the Forge MCP window, or use older syntax.";
         private const string CodeDomRetryRoslynHint =
             CodeDomHint + "Roslyn is installed, so retry with compiler='auto'.";
 

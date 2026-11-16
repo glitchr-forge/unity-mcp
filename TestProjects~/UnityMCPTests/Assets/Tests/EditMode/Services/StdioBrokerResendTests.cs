@@ -8,9 +8,9 @@ using System.Threading;
 using NUnit.Framework;
 
 using UnityEngine.TestTools;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Services.Transport.Transports;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// When a long-running command outlives the broker's patience, the Python side reconnects and

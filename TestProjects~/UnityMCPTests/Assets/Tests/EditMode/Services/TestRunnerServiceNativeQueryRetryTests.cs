@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Covers the bounded retry decision used when Unity's native "is the test run still active?"

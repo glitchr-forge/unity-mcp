@@ -4,11 +4,11 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using NUnit.Framework;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tests.EditMode.Services
+namespace ForgeMCP.Editor.Tests.EditMode.Services
 {
     [TestFixture]
     public class ToolDiscoveryServiceTests

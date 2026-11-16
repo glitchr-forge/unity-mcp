@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEditor;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 using TestNamespace;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Verifies that batch_execute only normalizes top-level parameter keys (snake_case → camelCase)

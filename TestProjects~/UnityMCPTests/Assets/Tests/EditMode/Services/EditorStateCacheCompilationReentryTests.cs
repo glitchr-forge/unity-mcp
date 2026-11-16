@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEngine.TestTools;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class EditorStateCacheCompilationReentryTests

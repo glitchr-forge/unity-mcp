@@ -1,3 +1,5 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,9 +8,9 @@ using System.Linq;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Helpers; // For Response class
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers; // For Response class
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Runtime.Helpers;
 
 #if UNITY_6000_0_OR_NEWER
 using PhysicsMaterialType = UnityEngine.PhysicsMaterial;
@@ -18,7 +20,7 @@ using PhysicsMaterialType = UnityEngine.PhysicMaterial;
 using PhysicsMaterialCombine = UnityEngine.PhysicMaterialCombine;
 #endif
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Handles asset management operations within the Unity project.

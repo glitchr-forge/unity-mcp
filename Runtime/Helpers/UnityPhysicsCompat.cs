@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
-namespace MCPForUnity.Runtime.Helpers
+namespace ForgeMCP.Runtime.Helpers
 {
     // Part of MCP for Unity's compat-shim family. See UnityCompatShims.cs in this
     // folder for the full list of shims, the audit policy, and the reflection pattern.

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Helpers for feeding a LOCAL on-disk image to a provider: resolve+verify the path, and encode

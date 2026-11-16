@@ -1,13 +1,13 @@
 using System.Linq;
-using MCPForUnity.Editor.Dependencies;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Dependencies.PlatformDetectors;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Dependencies;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Dependencies.PlatformDetectors;
+using ForgeMCP.Editor.Windows;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     public class GitDetectionTests
     {
@@ -78,7 +78,7 @@ namespace MCPForUnityTests.Editor
             {
                 IsAvailable = false,
                 ErrorMessage = "git not found",
-                Details = "Only needed to add or update MCP for Unity from a Git URL in the Package Manager."
+                Details = "Only needed to add or update Forge MCP from a Git URL in the Package Manager."
             };
 
             MCPSetupWindow.UpdateDependencyStatus(indicator, version, details, dep);

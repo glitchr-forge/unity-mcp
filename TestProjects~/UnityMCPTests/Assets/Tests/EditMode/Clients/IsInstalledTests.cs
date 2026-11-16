@@ -1,9 +1,9 @@
 using System.IO;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Clients.Configurators;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Clients.Configurators;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Clients
+namespace ForgeMCPTests.Editor.Clients
 {
     [TestFixture]
     public class IsInstalledTests

@@ -1,10 +1,10 @@
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Setup;
-using MCPForUnity.Editor.Windows;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Setup;
+using ForgeMCP.Editor.Windows;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.MenuItems
+namespace ForgeMCP.Editor.MenuItems
 {
     public static class MCPForUnityMenu
     {

@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services.Server
+namespace ForgeMCP.Editor.Services.Server
 {
     /// <summary>
     /// Platform-specific process termination for stopping MCP server processes.

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace MCPForUnity.Editor.Services.Server
+namespace ForgeMCP.Editor.Services.Server
 {
     /// <summary>
     /// Interface for launching commands in platform-specific terminal windows.

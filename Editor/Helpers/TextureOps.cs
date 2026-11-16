@@ -4,7 +4,7 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     public static class TextureOps
     {

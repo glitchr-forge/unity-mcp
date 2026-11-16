@@ -1,9 +1,9 @@
 using System;
 using System.Text;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Shared HTTP-response helpers for provider adapters: read the response text (falling back to

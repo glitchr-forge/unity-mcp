@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services.Server
+namespace ForgeMCP.Editor.Services.Server
 {
     /// <summary>
     /// Interface for building uvx/server command strings.

@@ -31,7 +31,7 @@ class RecordingMcp:
 def server(monkeypatch):
     # Importing the entry point configures process-wide logging and telemetry.
     # Keep collection and other tests independent of these startup side effects.
-    names = ("", "mcp-for-unity-server", "unity-mcp-telemetry", "httpx", "urllib3", "mcp.server.lowlevel.server")
+    names = ("", "glitch-art-mcp", "unity-mcp-telemetry", "httpx", "urllib3", "mcp.server.lowlevel.server")
     loggers = [logging.getLogger(name) for name in names]
     original_handlers = {handler for logger in loggers for handler in logger.handlers}
     with monkeypatch.context() as startup:

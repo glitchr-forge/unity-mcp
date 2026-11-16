@@ -1,8 +1,8 @@
 using System.Linq;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     // ConfigureAllDetectedClients walks the real McpClientRegistry and Configure()s every
     // detected client, which would touch real user config files on a dev machine. These

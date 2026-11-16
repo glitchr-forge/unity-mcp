@@ -1,9 +1,10 @@
 using System;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Services.Transport
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Services.Transport
 {
     /// <summary>
     /// Commands answered directly on the transport's receive thread, bypassing

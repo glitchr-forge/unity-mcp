@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Tests for TestJobManager's per-job InitTimeoutMs feature.
@@ -25,10 +25,10 @@ namespace MCPForUnityTests.Editor.Services
         public void SetUp()
         {
             var asm = typeof(MCPServiceLocator).Assembly;
-            var managerType = asm.GetType("MCPForUnity.Editor.Services.TestJobManager");
+            var managerType = asm.GetType("ForgeMCP.Editor.Services.TestJobManager");
             Assert.NotNull(managerType, "Could not find TestJobManager");
 
-            _testJobType = asm.GetType("MCPForUnity.Editor.Services.TestJob");
+            _testJobType = asm.GetType("ForgeMCP.Editor.Services.TestJob");
             Assert.NotNull(_testJobType, "Could not find TestJob");
 
             _jobsField = managerType.GetField("Jobs", BindingFlags.NonPublic | BindingFlags.Static);

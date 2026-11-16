@@ -97,7 +97,7 @@ jobs:
             {
               echo "## Compile check passed"
               echo
-              echo "\`MCPForUnity.Runtime\` and \`MCPForUnity.Editor\` compiled against Unity"
+              echo "\`MCP.Runtime\` and \`MCP.Editor\` compiled against Unity"
               echo "\`${{ steps.unity.outputs.version }}\` reference assemblies for **win, osx and linux**."
               echo
               echo "No Unity license was used, so this runs on fork PRs too."

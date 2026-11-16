@@ -5,10 +5,12 @@ using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools.Build;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools.Build;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     [McpForUnityTool("manage_build", AutoRegister = false, Group = "core",
         RequiresPolling = true, PollAction = "status", MaxPollSeconds = 1800)]

@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Resources.Editor
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.Editor
 {
     /// <summary>
     /// Returns the enabled/disabled state of all discovered tools, grouped by group name.

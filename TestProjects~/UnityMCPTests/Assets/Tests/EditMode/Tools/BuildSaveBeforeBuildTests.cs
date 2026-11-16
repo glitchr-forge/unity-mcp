@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
-using MCPForUnity.Editor.Tools.Build;
+using ForgeMCP.Editor.Tools.Build;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// SaveBeforeBuild originally called EditorSceneManager.SaveOpenScenes() unconditionally.

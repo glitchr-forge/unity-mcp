@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
 using NUnit.Framework;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     /// <summary>
     /// Locks the strict override contract of Claude CLI resolution after discovery was

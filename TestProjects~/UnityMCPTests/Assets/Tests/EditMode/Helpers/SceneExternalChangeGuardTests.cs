@@ -5,12 +5,12 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Tools;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Tools;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     /// <summary>
     /// The guard reconciles an open scene changed on disk before an asset refresh, so Unity's modal

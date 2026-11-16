@@ -2,12 +2,12 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Exercises the Meshy adapter against a <see cref="FakeHttpTransport"/> — no network.

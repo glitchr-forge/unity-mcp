@@ -89,7 +89,7 @@ async def _fetch_url_full(url: str) -> tuple[int, str, str]:
     loop = asyncio.get_running_loop()
 
     def _do_fetch() -> tuple[int, str, str]:
-        req = Request(url, headers={"User-Agent": "MCPForUnity/1.0"})
+        req = Request(url, headers={"User-Agent": "ForgeMCP/1.0"})
         try:
             with urlopen(req, timeout=10) as resp:
                 body = resp.read().decode("utf-8", errors="replace")

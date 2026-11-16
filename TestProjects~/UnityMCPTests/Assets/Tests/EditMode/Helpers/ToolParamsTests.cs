@@ -1,8 +1,9 @@
 using NUnit.Framework;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Helpers
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Helpers
 {
     /// <summary>
     /// Tests for the ToolParams parameter validation wrapper.

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows
+namespace ForgeMCP.Editor.Windows
 {
     /// <summary>
     /// Editor window for managing Unity EditorPrefs, specifically for MCP for Unity development

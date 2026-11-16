@@ -1,7 +1,7 @@
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport.Transports;
 
-namespace MCPForUnity.Editor
+namespace ForgeMCP.Editor
 {
     public static class McpCiBoot
     {

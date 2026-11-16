@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Models;
 
-namespace MCPForUnity.Editor.Clients.Configurators
+namespace ForgeMCP.Editor.Clients.Configurators
 {
     /// <summary>
     /// Configures the CodeBuddy CLI (~/.codebuddy.json) MCP settings.

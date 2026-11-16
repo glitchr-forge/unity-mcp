@@ -3,9 +3,9 @@ using NUnit.Framework;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 
-namespace MCPForUnity.Tests.EditMode.Tools
+namespace ForgeMCP.Tests.EditMode.Tools
 {
     /// <summary>
     /// Scenes that live under Packages/ used to be re-rooted under Assets/, so a valid

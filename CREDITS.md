@@ -1,6 +1,6 @@
 # Credits
 
-Glitch Art MCP is a fork of [MCP for Unity](https://github.com/CoplayDev/unity-mcp), created and maintained by
+Forge MCP is a fork of [MCP for Unity](https://github.com/CoplayDev/unity-mcp), created and maintained by
 Coplay and its community, and released under the MIT license. The original copyright notice is kept in `LICENSE`
 and `Server/LICENSE`. This fork is not affiliated with or endorsed by Coplay; "MCP for Unity" is their project's name.
 

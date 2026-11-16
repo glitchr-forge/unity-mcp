@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Best-effort cleanup when the Unity Editor is quitting.

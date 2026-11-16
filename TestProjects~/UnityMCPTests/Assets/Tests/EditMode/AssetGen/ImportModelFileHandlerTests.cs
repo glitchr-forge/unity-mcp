@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Tools.AssetGen;
+using ForgeMCP.Editor.Tools.AssetGen;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Drives the import_model_file handler with on-disk fixture files (no network, no provider).

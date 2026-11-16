@@ -1,10 +1,10 @@
 using System;
 using NUnit.Framework;
 using UnityEditor;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Constants;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     public class PackageUpdateServiceTests
     {

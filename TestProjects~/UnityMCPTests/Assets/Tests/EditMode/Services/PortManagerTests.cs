@@ -2,9 +2,9 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using NUnit.Framework;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class PortManagerTests

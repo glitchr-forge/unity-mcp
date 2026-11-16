@@ -4,12 +4,12 @@ using System.IO;
 using System.Reflection;
 using NUnit.Framework;
 using UnityEditor.Compilation;
-using MCPForUnity.Editor.Setup;
+using ForgeMCP.Editor.Setup;
 
-namespace MCPForUnityTests.Editor.Setup
+namespace ForgeMCPTests.Editor.Setup
 {
     /// <summary>
-    /// MCPForUnity.Editor sets overrideReferences, so it only sees precompiled assemblies it
+    /// ForgeMCP.Editor sets overrideReferences, so it only sees precompiled assemblies it
     /// names explicitly. RoslynInstaller drops its DLLs into the consuming project's
     /// Assets/Plugins/Roslyn, which is outside the package — if those names are missing from
     /// the asmdef, defining USE_ROSLYN breaks the build for UPM installs (issue #1295).
@@ -17,7 +17,7 @@ namespace MCPForUnityTests.Editor.Setup
     public class RoslynAsmdefReferenceTests
     {
         /// <summary>
-        /// Every DLL name RoslynInstaller downloads must appear in MCPForUnity.Editor.asmdef's
+        /// Every DLL name RoslynInstaller downloads must appear in ForgeMCP.Editor.asmdef's
         /// precompiledReferences, otherwise USE_ROSLYN cannot resolve the compiler assemblies.
         /// </summary>
         [Test]
@@ -38,7 +38,7 @@ namespace MCPForUnityTests.Editor.Setup
             }
 
             CollectionAssert.IsEmpty(missing,
-                "MCPForUnity.Editor.asmdef must list every DLL RoslynInstaller installs in "
+                "ForgeMCP.Editor.asmdef must list every DLL RoslynInstaller installs in "
                 + "precompiledReferences, otherwise USE_ROSLYN cannot compile against them. Missing: "
                 + string.Join(", ", missing));
         }
@@ -75,7 +75,7 @@ namespace MCPForUnityTests.Editor.Setup
             }
 
             CollectionAssert.IsEmpty(offenders,
-                "MCPForUnity.Editor must only use the Roslyn compiler layer that RoslynInstaller installs; "
+                "ForgeMCP.Editor must only use the Roslyn compiler layer that RoslynInstaller installs; "
                 + "the Workspaces layer is not shipped or referenced, so USE_ROSLYN would fail to compile. Found: "
                 + string.Join(", ", offenders));
         }
@@ -102,7 +102,7 @@ namespace MCPForUnityTests.Editor.Setup
         }
 
         /// <summary>
-        /// Returns the raw JSON of MCPForUnity.Editor.asmdef.
+        /// Returns the raw JSON of ForgeMCP.Editor.asmdef.
         /// </summary>
         private static string ReadEditorAsmdefJson()
         {
@@ -110,13 +110,13 @@ namespace MCPForUnityTests.Editor.Setup
         }
 
         /// <summary>
-        /// Resolves MCPForUnity.Editor.asmdef on disk through the compilation pipeline and fails the
+        /// Resolves ForgeMCP.Editor.asmdef on disk through the compilation pipeline and fails the
         /// test if it cannot be found.
         /// </summary>
         private static string ReadEditorAsmdefPath()
         {
-            string path = CompilationPipeline.GetAssemblyDefinitionFilePathFromAssemblyName("MCPForUnity.Editor");
-            Assert.IsFalse(string.IsNullOrEmpty(path), "Could not locate MCPForUnity.Editor.asmdef");
+            string path = CompilationPipeline.GetAssemblyDefinitionFilePathFromAssemblyName("MCP.Editor");
+            Assert.IsFalse(string.IsNullOrEmpty(path), "Could not locate ForgeMCP.Editor.asmdef");
             Assert.IsTrue(File.Exists(path), $"asmdef path does not exist: {path}");
             return path;
         }

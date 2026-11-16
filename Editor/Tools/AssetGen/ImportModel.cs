@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Tools.AssetGen
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.AssetGen
 {
     /// <summary>
     /// 3D marketplace import (Sketchfab). Search/preview are read-only calls awaited directly:

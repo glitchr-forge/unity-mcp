@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.ProBuilder
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.ProBuilder
 {
     internal static class ProBuilderSmoothing
     {

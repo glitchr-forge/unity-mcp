@@ -2,12 +2,12 @@ using System;
 using System.Linq;
 using System.Reflection;
 using NUnit.Framework;
-using MCPForUnity.Editor.Windows;
-using MCPForUnity.Editor.Windows.Components.Connection;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Windows;
+using ForgeMCP.Editor.Windows.Components.Connection;
+using ForgeMCP.Editor.Constants;
 using UnityEngine.UIElements;
 
-namespace MCPForUnityTests.Editor.Windows.Characterization
+namespace ForgeMCPTests.Editor.Windows.Characterization
 {
     /// <summary>
     /// Characterization tests for Windows & UI domain.
@@ -63,7 +63,7 @@ namespace MCPForUnityTests.Editor.Windows.Characterization
 
             // Verify the enum exists
             var type = typeof(EditorPrefsWindow);
-            var enumType = type.Assembly.GetType("MCPForUnity.Editor.Windows.EditorPrefType");
+            var enumType = type.Assembly.GetType("ForgeMCP.Editor.Windows.EditorPrefType");
             Assert.IsNotNull(enumType, "Should have EditorPrefType enum");
 
             var enumValues = Enum.GetNames(enumType);
@@ -711,7 +711,7 @@ namespace MCPForUnityTests.Editor.Windows.Characterization
         [Test]
         public void McpAssetGenSection_HasModelDropdownAndSharedFalRowBuilders()
         {
-            var type = typeof(MCPForUnity.Editor.Windows.Components.AssetGen.McpAssetGenSection);
+            var type = typeof(ForgeMCP.Editor.Windows.Components.AssetGen.McpAssetGenSection);
 
             Assert.IsNotNull(type.GetMethod("AddModelDropdown", BindingFlags.NonPublic | BindingFlags.Instance),
                 "expected a per-provider model dropdown builder");
@@ -731,7 +731,7 @@ namespace MCPForUnityTests.Editor.Windows.Characterization
         [Test]
         public void McpAssetGenSection_HasRefreshHandler_AndCachedRefreshElements()
         {
-            var type = typeof(MCPForUnity.Editor.Windows.Components.AssetGen.McpAssetGenSection);
+            var type = typeof(ForgeMCP.Editor.Windows.Components.AssetGen.McpAssetGenSection);
 
             Assert.IsNotNull(type.GetMethod("OnRefreshClicked", BindingFlags.NonPublic | BindingFlags.Instance),
                 "expected a Refresh click handler");

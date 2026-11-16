@@ -2,15 +2,15 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Security;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Tools.AssetGen;
+using ForgeMCP.Editor.Security;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Tools.AssetGen;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Drives the import_model handler with a fake transport and a temp key store (no network).

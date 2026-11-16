@@ -85,7 +85,7 @@ logging.basicConfig(
     stream=None,  # None -> defaults to sys.stderr; avoid stdout used by MCP stdio
     force=True    # Ensure our handler replaces any prior stdout handlers
 )
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 # Also write logs to a rotating file so logs are available when launched via stdio.
 # Location follows OS conventions; override with UNITY_MCP_LOG_DIR.
@@ -151,7 +151,7 @@ async def server_lifespan(server: FastMCP) -> AsyncIterator[dict[str, Any]]:
     """Handle server startup and shutdown."""
     global _unity_connection_pool, _server_version
     _server_version = get_package_version()
-    logger.info(f"MCP for Unity Server v{_server_version} starting up")
+    logger.info(f"Forge MCP server v{_server_version} starting up")
 
     # Register custom tool management endpoints with FastMCP
     # Routes are declared globally below after FastMCP initialization
@@ -283,7 +283,7 @@ async def server_lifespan(server: FastMCP) -> AsyncIterator[dict[str, Any]]:
     finally:
         if _unity_connection_pool:
             _unity_connection_pool.disconnect_all()
-        logger.info("MCP for Unity Server shut down")
+        logger.info("Forge MCP server shut down")
 
 
 def _build_instructions(project_scoped_tools: bool) -> str:
@@ -375,7 +375,7 @@ def _normalize_instance_token(instance_token: str | None) -> tuple[str | None, s
 
 def create_mcp_server(project_scoped_tools: bool) -> FastMCP:
     mcp = FastMCP(
-        name="mcp-for-unity-server",
+        name="glitch-art-mcp",
         lifespan=server_lifespan,
         instructions=_build_instructions(project_scoped_tools),
     )
@@ -390,7 +390,7 @@ def create_mcp_server(project_scoped_tools: bool) -> FastMCP:
             "status": "healthy",
             "timestamp": time.time(),
             "version": _server_version or "unknown",
-            "message": "MCP for Unity server is running"
+            "message": "Forge MCP server is running"
         })
 
     @mcp.custom_route("/api/auth/login-url", methods=["GET"])
@@ -666,7 +666,7 @@ def create_mcp_server(project_scoped_tools: bool) -> FastMCP:
 def main():
     """Entry point for uvx and console scripts."""
     parser = argparse.ArgumentParser(
-        description="MCP for Unity Server",
+        description="Forge MCP server",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Environment Variables:

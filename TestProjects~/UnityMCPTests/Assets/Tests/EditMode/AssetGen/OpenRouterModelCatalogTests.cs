@@ -5,16 +5,16 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.AssetGen;
-using MCPForUnity.Editor.Services.AssetGen.Http;
-using MCPForUnity.Editor.Services.AssetGen.Providers;
-using MCPForUnity.Editor.Tools.AssetGen;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.AssetGen;
+using ForgeMCP.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Providers;
+using ForgeMCP.Editor.Tools.AssetGen;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEngine.TestTools;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     public class OpenRouterModelCatalogTests
     {

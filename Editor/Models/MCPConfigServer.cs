@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace MCPForUnity.Editor.Models
+namespace ForgeMCP.Editor.Models
 {
     [Serializable]
     public class McpConfigServer

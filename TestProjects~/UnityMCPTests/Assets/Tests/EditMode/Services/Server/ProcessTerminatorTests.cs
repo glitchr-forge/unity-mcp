@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services.Server;
+using ForgeMCP.Editor.Services.Server;
 
-namespace MCPForUnityTests.Editor.Services.Server
+namespace ForgeMCPTests.Editor.Services.Server
 {
     /// <summary>
     /// Unit tests for ProcessTerminator component.

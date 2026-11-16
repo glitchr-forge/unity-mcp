@@ -1,13 +1,13 @@
 
 using System;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Services.Transport.Transports;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Bridges the editor UI to the active transport (HTTP with WebSocket push, or stdio).

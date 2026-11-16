@@ -1,9 +1,9 @@
 using System;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnity.Editor.Dependencies.PlatformDetectors
+namespace ForgeMCP.Editor.Dependencies.PlatformDetectors
 {
     /// <summary>
     /// Base class for platform-specific dependency detection
@@ -82,7 +82,7 @@ namespace MCPForUnity.Editor.Dependencies.PlatformDetectors
                 if (!TryFindInPath("git", out string gitPath))
                 {
                     status.ErrorMessage = "git not found";
-                    status.Details = "Only needed to add or update MCP for Unity from a Git URL in the Package Manager.";
+                    status.Details = "Only needed to add or update Forge MCP from a Git URL in the Package Manager.";
                     return status;
                 }
 

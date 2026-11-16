@@ -1,12 +1,14 @@
 using System;
 using NUnit.Framework;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.Prefabs;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.Prefabs;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnityTests.Editor.Tools.Characterization
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCPTests.Editor.Tools.Characterization
 {
     /// <summary>
     /// Characterization tests for Editor Tools domain.

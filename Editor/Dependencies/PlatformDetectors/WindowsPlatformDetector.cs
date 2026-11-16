@@ -4,12 +4,12 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnity.Editor.Dependencies.PlatformDetectors
+namespace ForgeMCP.Editor.Dependencies.PlatformDetectors
 {
     /// <summary>
     /// Windows-specific dependency detection
@@ -89,7 +89,7 @@ namespace MCPForUnity.Editor.Dependencies.PlatformDetectors
    - Run: powershell -ExecutionPolicy ByPass -c ""irm https://astral.sh/uv/install.ps1 | iex""
    - Or download from: https://github.com/astral-sh/uv/releases
 
-3. MCP Server: Will be installed automatically by MCP for Unity Bridge";
+3. MCP Server: Will be installed automatically by Forge MCP";
         }
 
         public override DependencyStatus DetectUv()

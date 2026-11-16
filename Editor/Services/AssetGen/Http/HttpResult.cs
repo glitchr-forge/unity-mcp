@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services.AssetGen.Http
+namespace ForgeMCP.Editor.Services.AssetGen.Http
 {
     /// <summary>
     /// Transport-agnostic result of an <see cref="HttpRequestSpec"/>. <see cref="Status"/> is

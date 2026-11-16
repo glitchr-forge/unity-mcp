@@ -1,5 +1,7 @@
 using System;
 
+// THE TOOL CONTRACT KEEPS UPSTREAM'S NAMESPACE: a custom tool written for MCP for Unity (using MCPForUnity.Editor.Resources)
+// compiles unchanged against Forge MCP. Everything else of the package is in ForgeMCP.
 namespace MCPForUnity.Editor.Resources
 {
     /// <summary>

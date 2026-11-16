@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// At-rest storage for AI asset-generation provider API keys.

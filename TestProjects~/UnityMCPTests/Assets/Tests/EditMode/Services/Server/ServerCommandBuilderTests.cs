@@ -1,10 +1,10 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Server;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Server;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services.Server
+namespace ForgeMCPTests.Editor.Services.Server
 {
     /// <summary>
     /// Unit tests for ServerCommandBuilder component.

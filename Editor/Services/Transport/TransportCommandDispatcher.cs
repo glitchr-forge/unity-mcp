@@ -2,15 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Models;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Models;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Tools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services.Transport
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Services.Transport
 {
     /// <summary>
     /// Centralised command execution pipeline shared by all transport implementations.
@@ -205,15 +206,15 @@ namespace MCPForUnity.Editor.Services.Transport
                 // iteration, so anything run here must not drive the player loop itself.
                 _mainThreadContext.Post(_ =>
                 {
-                    var previous = MCPForUnity.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop;
-                    MCPForUnity.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop = true;
+                    var previous = ForgeMCP.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop;
+                    ForgeMCP.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop = true;
                     try
                     {
                         Pump();
                     }
                     finally
                     {
-                        MCPForUnity.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop = previous;
+                        ForgeMCP.Runtime.Helpers.ScreenshotUtility.InsidePlayerLoop = previous;
                     }
                 }, null);
                 return;

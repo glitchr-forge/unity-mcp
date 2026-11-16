@@ -1,9 +1,9 @@
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
 using NUnit.Framework;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     /// <summary>
     /// Synchronous configuration tests exercise user preferences independently of a resident

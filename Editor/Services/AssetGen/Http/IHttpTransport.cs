@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Http
+namespace ForgeMCP.Editor.Services.AssetGen.Http
 {
     /// <summary>
     /// The HTTP seam that provider adapters depend on. Production uses

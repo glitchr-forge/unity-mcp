@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Import
+namespace ForgeMCP.Editor.Services.AssetGen.Import
 {
     /// <summary>
     /// Extracts a .zip into a destination directory while rejecting Zip-Slip path traversal:

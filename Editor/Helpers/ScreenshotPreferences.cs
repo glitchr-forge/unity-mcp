@@ -1,7 +1,7 @@
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Runtime.Helpers;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Per-user EditorPrefs override for the default screenshot output folder.

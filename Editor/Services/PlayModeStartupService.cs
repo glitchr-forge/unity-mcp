@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MCPForUnity.Editor.Services
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>Tracks play startup across domain reloads without changing Enter Play Mode options.</summary>
     [InitializeOnLoad]

@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>Normalized lifecycle state reported by a provider poll, across all providers.</summary>
     public enum ProviderPollState

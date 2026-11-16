@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEditor;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
 using TestNamespace;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ComponentOpsUnityEventTests
     {

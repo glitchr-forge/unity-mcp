@@ -1,10 +1,10 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MCPForUnity.Editor.Services.AssetGen.Http;
+using ForgeMCP.Editor.Services.AssetGen.Http;
 using Newtonsoft.Json.Linq;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     public sealed class FalModelAdapter : IModelProviderAdapter
     {

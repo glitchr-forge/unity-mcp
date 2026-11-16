@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services.Transport.Transports;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Unity Bridge telemetry helper for collecting usage analytics

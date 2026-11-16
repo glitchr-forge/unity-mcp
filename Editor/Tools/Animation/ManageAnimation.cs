@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Animation
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools.Animation
 {
     [McpForUnityTool("manage_animation", AutoRegister = false, Group = "animation")]
     public static class ManageAnimation

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Utility class for converting between naming conventions (snake_case, camelCase).
@@ -14,7 +14,7 @@ namespace MCPForUnity.Editor.Helpers
         /// <summary>
         /// Checks whether a type belongs to the built-in MCP for Unity package.
         /// Returns true when the type's namespace starts with
-        /// <paramref name="builtInNamespacePrefix"/> or its assembly is MCPForUnity.Editor.
+        /// <paramref name="builtInNamespacePrefix"/> or its assembly is ForgeMCP.Editor.
         /// </summary>
         public static bool IsBuiltInMcpType(Type type, string assemblyName, string builtInNamespacePrefix)
         {
@@ -25,7 +25,7 @@ namespace MCPForUnity.Editor.Helpers
             }
 
             if (!string.IsNullOrEmpty(assemblyName)
-                && assemblyName.Equals("MCPForUnity.Editor", StringComparison.Ordinal))
+                && assemblyName.Equals("MCP.Editor", StringComparison.Ordinal))
             {
                 return true;
             }

@@ -4,10 +4,10 @@ using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 using System.Reflection;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// In-memory tests for ManageScript validation logic.

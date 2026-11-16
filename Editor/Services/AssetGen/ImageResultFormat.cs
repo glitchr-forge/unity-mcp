@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace MCPForUnity.Editor.Services.AssetGen
+namespace ForgeMCP.Editor.Services.AssetGen
 {
     internal static class ImageResultFormat
     {

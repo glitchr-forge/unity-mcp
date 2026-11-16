@@ -1,8 +1,8 @@
 using NUnit.Framework;
 using UnityEditor;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Services;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     [TestFixture]
     public class EditorStateCacheSessionValuesTests

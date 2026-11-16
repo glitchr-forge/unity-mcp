@@ -14,7 +14,7 @@ from core.logging_decorator import log_execution
 from services.registry import get_registered_resources
 from utils.module_discovery import discover_modules
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 
 # Export decorator for easy imports within tools
 __all__ = ['register_all_resources']
@@ -46,7 +46,7 @@ def register_all_resources(mcp: FastMCP, *, project_scoped_tools: bool = True):
     Any .py file in this directory or subdirectories with @mcp_for_unity_resource decorated
     functions will be automatically registered.
     """
-    logger.info("Auto-discovering MCP for Unity Server resources...")
+    logger.info("Auto-discovering Forge MCP server resources...")
     # Dynamic import of all modules in this directory
     resources_dir = Path(__file__).parent
 

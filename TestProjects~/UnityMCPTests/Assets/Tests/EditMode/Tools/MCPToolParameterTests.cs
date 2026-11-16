@@ -3,14 +3,14 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEditor;
 using Newtonsoft.Json.Linq;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Tools;
-using MCPForUnity.Editor.Tools.GameObjects;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Tools;
+using ForgeMCP.Editor.Tools.GameObjects;
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     /// <summary>
     /// Tests for MCP tool parameter handling - JSON parsing in manage_asset and manage_gameobject tools.

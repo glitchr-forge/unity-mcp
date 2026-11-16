@@ -1,8 +1,8 @@
 using System.Runtime.InteropServices;
-using MCPForUnity.Editor.Dependencies;
+using ForgeMCP.Editor.Dependencies;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor
+namespace ForgeMCPTests.Editor
 {
     /// <summary>
     /// Verifies the one-click uv installer builds the correct command per platform. The command

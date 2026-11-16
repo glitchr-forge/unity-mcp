@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Resources;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Resources;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Services
+using MCPForUnity.Editor.Resources;
+namespace ForgeMCP.Editor.Services
 {
     public class ResourceDiscoveryService : IResourceDiscoveryService
     {
@@ -134,7 +135,7 @@ namespace MCPForUnity.Editor.Services
                 };
 
                 metadata.IsBuiltIn = StringCaseUtility.IsBuiltInMcpType(
-                    type, metadata.AssemblyName, "MCPForUnity.Editor.Resources");
+                    type, metadata.AssemblyName, "ForgeMCP.Editor.Resources");
 
                 return metadata;
             }

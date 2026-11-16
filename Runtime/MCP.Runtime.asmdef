@@ -1,6 +1,6 @@
 {
-    "name": "MCPForUnity.Runtime",
-    "rootNamespace": "MCPForUnity.Runtime",
+    "name": "MCP.Runtime",
+    "rootNamespace": "ForgeMCP.Runtime",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

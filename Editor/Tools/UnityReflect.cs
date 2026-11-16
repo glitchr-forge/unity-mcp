@@ -5,13 +5,15 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Runtime.Helpers;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Runtime.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Tools
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Tools
 {
     [McpForUnityTool("unity_reflect", AutoRegister = false, Group = "docs")]
     public static class UnityReflect

@@ -1,4 +1,4 @@
-using MCPForUnity.Editor.Tools;
+using ForgeMCP.Editor.Tools;
 using System;
 using System.Collections;
 using Newtonsoft.Json.Linq;
@@ -7,10 +7,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 using TestNamespace;
-using static MCPForUnityTests.Editor.TestUtilities;
+using static ForgeMCPTests.Editor.TestUtilities;
 using Object = UnityEngine.Object;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageEditorStartupTests
     {

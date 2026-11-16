@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace Fusion
     }
 }
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class FusionUnsafeTypeSerializationTests
     {

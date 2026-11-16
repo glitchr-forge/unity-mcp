@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Tools.Animation
+namespace ForgeMCP.Editor.Tools.Animation
 {
     internal static class AnimatorResolver
     {

@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Helpers
+namespace ForgeMCPTests.Editor.Helpers
 {
     public class AssetPathUtilityOfflineTests
     {

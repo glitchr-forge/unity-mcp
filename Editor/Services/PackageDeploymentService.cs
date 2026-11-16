@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Handles copying a local MCPForUnity folder into the current project's package location with backup/restore support.
@@ -113,10 +113,10 @@ namespace MCPForUnity.Editor.Services
 
             try
             {
-                EditorUtility.DisplayProgressBar("Deploy MCP for Unity", "Creating backup...", 0.25f);
+                EditorUtility.DisplayProgressBar("Deploy Forge MCP", "Creating backup...", 0.25f);
                 string backupPath = CreateBackup(targetPath);
 
-                EditorUtility.DisplayProgressBar("Deploy MCP for Unity", "Replacing package contents...", 0.7f);
+                EditorUtility.DisplayProgressBar("Deploy Forge MCP", "Replacing package contents...", 0.7f);
                 CopyCoreFolders(sourcePath, targetPath);
 
                 EditorPrefs.SetString(EditorPrefKeys.PackageDeployLastBackupPath, backupPath);
@@ -159,7 +159,7 @@ namespace MCPForUnity.Editor.Services
 
             try
             {
-                EditorUtility.DisplayProgressBar("Restore MCP for Unity", "Restoring backup...", 0.5f);
+                EditorUtility.DisplayProgressBar("Restore Forge MCP", "Restoring backup...", 0.5f);
                 ReplaceDirectory(backupPath, targetPath);
 
                 AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);

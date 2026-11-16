@@ -4,10 +4,10 @@ using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
-using MCPForUnity.Editor.Tools.ProBuilder;
-using static MCPForUnityTests.Editor.TestUtilities;
+using ForgeMCP.Editor.Tools.ProBuilder;
+using static ForgeMCPTests.Editor.TestUtilities;
 
-namespace MCPForUnityTests.Editor.Tools
+namespace ForgeMCPTests.Editor.Tools
 {
     public class ManageProBuilderTests
     {

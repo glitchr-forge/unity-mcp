@@ -1,9 +1,9 @@
 using System;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services.Transport;
-using MCPForUnity.Editor.Services.Transport.Transports;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services.Transport;
+using ForgeMCP.Editor.Services.Transport.Transports;
 
-namespace MCPForUnity.Editor.Services
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Service locator for accessing MCP services without dependency injection

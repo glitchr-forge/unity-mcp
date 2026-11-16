@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
-using MCPForUnity.Editor.Dependencies.Models;
-using MCPForUnity.Editor.Dependencies.PlatformDetectors;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Dependencies.Models;
+using ForgeMCP.Editor.Dependencies.PlatformDetectors;
+using ForgeMCP.Editor.Helpers;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Dependencies
+namespace ForgeMCP.Editor.Dependencies
 {
     /// <summary>
     /// Main orchestrator for dependency validation and management
@@ -117,7 +117,7 @@ namespace MCPForUnity.Editor.Dependencies
 
             if (missing.Count == 0)
             {
-                result.RecommendedActions.Add("All dependencies are available. You can start using MCP for Unity.");
+                result.RecommendedActions.Add("All dependencies are available. You can start using Forge MCP.");
                 return;
             }
 
@@ -139,7 +139,7 @@ namespace MCPForUnity.Editor.Dependencies
 
             if (result.GetMissingRequired().Count > 0)
             {
-                result.RecommendedActions.Add("Use the Setup Window (Window > Glitch Art MCP > Local Setup Window) for guided installation.");
+                result.RecommendedActions.Add("Use the Setup Window (Window > Forge MCP > Local Setup Window) for guided installation.");
             }
         }
     }

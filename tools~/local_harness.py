@@ -83,7 +83,7 @@ REPO_ROOT = _THIS.parents[1]
 SERVER_SRC = REPO_ROOT / "Server~" / "src"
 
 DEFAULT_PROJECT_PATH = "TestProjects/UnityMCPTests"
-BOOT_METHOD = "MCPForUnity.Editor.McpCiBoot.StartStdioForCi"
+BOOT_METHOD = "ForgeMCP.Editor.McpCiBoot.StartStdioForCi"
 
 # Socket-release delay before any resident re-launch, matching StdioBridgeHost's
 # own toWait.Wait(2000) for the #688/#692/#1173 Windows TcpListener leak fix.

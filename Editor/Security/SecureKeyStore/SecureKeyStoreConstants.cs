@@ -1,4 +1,4 @@
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>Shared constants for the secure key store.</summary>
     internal static class SecureKeyStoreConstants

@@ -6,7 +6,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace MCPForUnity.Editor.Setup
+namespace ForgeMCP.Editor.Setup
 {
     public class McpForUnitySkillInstaller : EditorWindow
     {

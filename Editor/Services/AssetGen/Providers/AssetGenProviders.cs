@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using MCPForUnity.Editor.Security;
+using ForgeMCP.Editor.Security;
 
-namespace MCPForUnity.Editor.Services.AssetGen.Providers
+namespace ForgeMCP.Editor.Services.AssetGen.Providers
 {
     /// <summary>
     /// Factory + registry for asset-gen provider adapters. Resolves a provider id to its adapter
@@ -88,7 +88,7 @@ namespace MCPForUnity.Editor.Services.AssetGen.Providers
         /// Shared by the asset-gen tools and the job manager so the wording stays in one place.
         /// </summary>
         public static string MissingKeyMessage(string provider)
-            => $"No API key configured for '{provider}'. Add it in the MCP for Unity → Asset Generation tab " +
+            => $"No API key configured for '{provider}'. Add it in the Forge MCP → Asset Generation tab " +
                $"(or set MCPFORUNITY_{(provider ?? string.Empty).ToUpperInvariant()}_API_KEY).";
     }
 }

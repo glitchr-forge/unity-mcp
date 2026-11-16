@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 
-namespace MCPForUnity.Editor.Services
+using MCPForUnity.Editor.Tools;
+namespace ForgeMCP.Editor.Services
 {
     /// <summary>
     /// Metadata for a discovered tool

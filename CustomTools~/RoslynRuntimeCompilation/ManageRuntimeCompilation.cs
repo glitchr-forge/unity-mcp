@@ -1,3 +1,5 @@
+using MCPForUnity.Editor.Tools;
+using MCPForUnity.Editor.Helpers;
 #nullable disable
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Reflection;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEditor;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 
 #if USE_ROSLYN
 using Microsoft.CodeAnalysis;
@@ -15,7 +17,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
 #endif
 
-namespace MCPForUnity.Editor.Tools
+namespace ForgeMCP.Editor.Tools
 {
     /// <summary>
     /// Runtime compilation tool for MCP Unity.

@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace MCPForUnity.Editor.Security
+namespace ForgeMCP.Editor.Security
 {
     /// <summary>
     /// Scrubs secrets out of text before it is logged or returned. Use on every error/log

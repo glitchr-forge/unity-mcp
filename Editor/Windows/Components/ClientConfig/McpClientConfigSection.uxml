@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <Style src="../Common.uss" />
     <ui:VisualElement name="client-section" class="section">
-        <ui:Label text="Client Configuration" class="section-title" />
+        <ui:Label text="Clients" class="section-title" />
         <ui:VisualElement class="section-content">
-            <ui:Button name="configure-all-button" text="Configure All Detected Clients" class="primary-button" />
-            <ui:Foldout name="client-details-foldout" text="Per-client setup" value="true" class="client-details-foldout">
+            <ui:Button name="configure-all-button" text="Configure all" class="primary-button" />
+            <ui:Foldout name="client-details-foldout" text="One client" value="true" class="client-details-foldout">
                 <ui:VisualElement class="setting-row">
-                    <ui:Label text="Client:" class="setting-label" />
+                    <ui:Label text="Client" class="setting-label" />
                     <ui:DropdownField name="client-dropdown" class="setting-dropdown-inline" />
                 </ui:VisualElement>
                 <ui:VisualElement class="setting-row">
@@ -28,7 +28,7 @@
                     <ui:Button name="browse-project-dir-button" text="Browse" class="icon-button" />
                     <ui:Button name="clear-project-dir-button" text="Clear" class="icon-button" />
                 </ui:VisualElement>
-                <ui:Foldout name="manual-config-foldout" text="Manual Configuration" value="false" class="manual-config-foldout">
+                <ui:Foldout name="manual-config-foldout" text="Configure it by hand" value="false" class="manual-config-foldout">
                     <ui:VisualElement class="manual-config-content">
                         <ui:Label text="Config Path:" class="config-label" />
                         <ui:VisualElement class="path-row">

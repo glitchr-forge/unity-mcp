@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using MCPForUnity.Editor.Clients;
-using MCPForUnity.Editor.Models;
+using ForgeMCP.Editor.Clients;
+using ForgeMCP.Editor.Models;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.Clients
+namespace ForgeMCPTests.Editor.Clients
 {
     /// <summary>
     /// Covers the regression where JsonFileMcpConfigurator.CheckStatus only recognized

@@ -2,10 +2,10 @@ using System;
 using System.IO;
 using System.IO.Compression;
 using System.Text;
-using MCPForUnity.Editor.Services.AssetGen.Import;
+using ForgeMCP.Editor.Services.AssetGen.Import;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     /// <summary>
     /// Verifies <see cref="SafeZipExtractor"/> unpacks normal entries and rejects Zip-Slip

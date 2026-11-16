@@ -1,13 +1,15 @@
 using System;
 using System.IO;
 using System.Reflection;
-using MCPForUnity.Editor.Helpers;
+using ForgeMCP.Editor.Helpers;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace MCPForUnity.Editor.Resources.Project
+using MCPForUnity.Editor.Resources;
+using MCPForUnity.Editor.Helpers;
+namespace ForgeMCP.Editor.Resources.Project
 {
     /// <summary>
     /// Provides static project configuration information.

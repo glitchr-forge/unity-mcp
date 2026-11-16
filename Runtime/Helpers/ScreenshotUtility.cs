@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 
-namespace MCPForUnity.Runtime.Helpers
+namespace ForgeMCP.Runtime.Helpers
 //The reason for having another Runtime Utilities in additional to Editor Utilities is to avoid Editor-only dependencies in this runtime code.
 {
     public readonly struct ScreenshotCaptureResult
@@ -804,7 +804,7 @@ namespace MCPForUnity.Runtime.Helpers
             yield return new WaitForEndOfFrame();
             Texture2D tex = null;
             try { tex = ScreenCapture.CaptureScreenshotAsTexture(_superSize); }
-            catch (Exception ex) { Debug.LogError($"[MCP for Unity] CaptureScreenshotAsTexture failed: {ex.Message}"); }
+            catch (Exception ex) { Debug.LogError($"[Forge MCP] CaptureScreenshotAsTexture failed: {ex.Message}"); }
             _onComplete?.Invoke(tex);
             Destroy(gameObject);
         }

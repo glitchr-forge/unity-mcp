@@ -1,8 +1,8 @@
 using System;
-using MCPForUnity.Editor.Security;
+using ForgeMCP.Editor.Security;
 using NUnit.Framework;
 
-namespace MCPForUnityTests.Editor.AssetGen
+namespace ForgeMCPTests.Editor.AssetGen
 {
     public class EnvKeyOverrideTests
     {

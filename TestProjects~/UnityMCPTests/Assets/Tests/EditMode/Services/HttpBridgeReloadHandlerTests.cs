@@ -1,12 +1,12 @@
 using System;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services;
-using MCPForUnity.Editor.Services.Transport;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services;
+using ForgeMCP.Editor.Services.Transport;
 using UnityEditor;
 
-namespace MCPForUnityTests.Editor.Services
+namespace ForgeMCPTests.Editor.Services
 {
     /// <summary>
     /// Tests for the HTTP reload-resume flag semantics (#1229): the flag must survive

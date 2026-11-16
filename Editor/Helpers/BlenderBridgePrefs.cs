@@ -1,9 +1,9 @@
 using System.IO;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Services.Blender;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Services.Blender;
 using UnityEditor;
 
-namespace MCPForUnity.Editor.Helpers
+namespace ForgeMCP.Editor.Helpers
 {
     /// <summary>
     /// Per-user, NON-SECRET configuration for the Blender Bridge (Asset Gen tab): where the

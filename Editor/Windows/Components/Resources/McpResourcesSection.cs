@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MCPForUnity.Editor.Constants;
-using MCPForUnity.Editor.Helpers;
-using MCPForUnity.Editor.Services;
+using ForgeMCP.Editor.Constants;
+using ForgeMCP.Editor.Helpers;
+using ForgeMCP.Editor.Services;
 using UnityEditor;
 using UnityEngine.UIElements;
 
-namespace MCPForUnity.Editor.Windows.Components.Resources
+using MCPForUnity.Editor.Resources;
+namespace ForgeMCP.Editor.Windows.Components.Resources
 {
     /// <summary>
     /// Controller for the Resources section inside the MCP for Unity editor window.

@@ -17,7 +17,7 @@ from core.config import config
 from services.registry import get_registered_tools
 from transport.plugin_hub import PluginHub
 
-logger = logging.getLogger("mcp-for-unity-server")
+logger = logging.getLogger("glitch-art-mcp")
 # Separate logger that propagates to root -> stderr so diagnostics show in console
 _diag = logging.getLogger("transport.unity_instance_middleware")
 
