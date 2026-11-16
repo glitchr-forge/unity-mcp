@@ -16,4 +16,13 @@ namespace ForgeMCP.Editor.Services.Transport
         Task<bool> VerifyAsync();
         Task ReregisterToolsAsync();
     }
+
+    /// <summary>
+    /// A transport that, its connection lost, keeps trying to get it back (the WebSocket bridge): while it does, it is
+    /// not connected but still wanted, so a domain reload must resume it as it resumes a connected one.
+    /// </summary>
+    public interface IReconnectingTransport
+    {
+        bool IsReconnecting { get; }
+    }
 }

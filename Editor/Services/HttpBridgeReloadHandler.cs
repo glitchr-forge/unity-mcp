@@ -71,7 +71,9 @@ namespace ForgeMCP.Editor.Services
 
         internal static void OnBeforeAssemblyReloadCore(TransportManager transport)
         {
-            if (transport.IsRunning(TransportMode.Http))
+            // Connected, or reconnecting after the server went away (restarted, replaced by its service): either way
+            // the bridge is wanted, and a reload in the middle of a reconnect used to drop it for the session.
+            if (transport.IsRunning(TransportMode.Http) || transport.IsReconnecting(TransportMode.Http))
             {
                 SessionState.SetBool(ResumeSessionKey, true);
 

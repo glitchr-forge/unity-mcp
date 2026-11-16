@@ -144,9 +144,11 @@ namespace ForgeMCPTests.Editor
     /// completes immediately with StartResult so retry loops run without awaits
     /// (the test framework floor cannot run async tests).
     /// </summary>
-    public sealed class FakeTransportClient : IMcpTransportClient
+    public sealed class FakeTransportClient : IMcpTransportClient, IReconnectingTransport
     {
         public bool StartResult = true;
+        public bool Reconnecting;
+        public bool IsReconnecting => Reconnecting;
         public int StartCalls;
         public Action OnStart;
 

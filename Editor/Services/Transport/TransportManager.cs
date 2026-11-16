@@ -167,6 +167,9 @@ namespace ForgeMCP.Editor.Services.Transport
 
         public bool IsRunning(TransportMode mode) => GetState(mode).IsConnected;
 
+        /// <summary>Whether the transport lost its connection and is trying to get it back.</summary>
+        public bool IsReconnecting(TransportMode mode) => GetClient(mode) is IReconnectingTransport r && r.IsReconnecting;
+
         /// <summary>
         /// Synchronous teardown for shutdown/reload hooks where async awaits are not possible.
         /// </summary>

@@ -75,6 +75,7 @@ namespace ForgeMCP.Editor.Services.Transport.Transports
         }
 
         public bool IsConnected => _isConnected;
+        public bool IsReconnecting => Volatile.Read(ref _isReconnectingFlag) == 1;
         public string TransportName => TransportDisplayName;
         public TransportState State => _state;
 

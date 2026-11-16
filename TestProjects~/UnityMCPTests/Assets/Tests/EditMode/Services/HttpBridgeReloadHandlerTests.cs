@@ -76,6 +76,18 @@ namespace ForgeMCPTests.Editor.Services
         }
 
         [Test]
+        public void BeforeReloadCore_BridgeReconnecting_SetsFlag()
+        {
+            // The server went away (restarted, replaced by its service) and the bridge is retrying when a reload comes:
+            // it must be resumed after the reload, not dropped for the rest of the session.
+            _fakeClient.Reconnecting = true;
+
+            HttpBridgeReloadHandler.OnBeforeAssemblyReloadCore(_manager);
+
+            Assert.IsTrue(ResumeFlagSet, "a bridge reconnecting at the reload must be resumed after it");
+        }
+
+        [Test]
         public void BeforeReloadCore_BridgeNotRunning_PreservesPendingFlag()
         {
             SessionState.SetBool(HttpBridgeReloadHandler.ResumeSessionKey, true);
