@@ -56,6 +56,7 @@ Changelog = "https://github.com/CoplayDev/unity-mcp/releases"
 [project.scripts]
 mcp-for-unity = "main:main"
 unity-mcp = "cli.main:main"
+forge-mcp = "forge_cli:main"
 
 [build-system]
 requires = ["setuptools>=64.0.0", "wheel"]
@@ -68,7 +69,7 @@ where = ["src"]
 "" = "src"
 
 [tool.setuptools]
-py-modules = ["main"]
+py-modules = ["main", "forge_cli"]
 
 [tool.coverage.run]
 source = ["src"]

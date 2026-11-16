@@ -228,6 +228,30 @@ namespace ForgeMCP.Editor.Tools
                         next_group = Undo.GetCurrentGroupName()
                     });
                 }
+                case "quit":
+                {
+                    // The editor closed, as its window's close would: Play stopped, scenes and assets saved first
+                    // (save=false refuses while a scene has unsaved changes), the exit left to the next frame so this
+                    // answer reaches the server.
+                    bool save = p.GetBool("save", true);
+                    if (EditorApplication.isPlaying) EditorApplication.isPlaying = false;
+                    var dirty = new System.Collections.Generic.List<string>();
+                    for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++)
+                    {
+                        var scene = UnityEngine.SceneManagement.SceneManager.GetSceneAt(i);
+                        if (scene.isDirty) dirty.Add(string.IsNullOrEmpty(scene.path) ? scene.name : scene.path);
+                    }
+                    if (dirty.Count > 0 && !save)
+                        return new ErrorResponse($"Unsaved changes in {string.Join(", ", dirty)}; quit with save=true to keep them.");
+                    if (save)
+                    {
+                        if (dirty.Count > 0 && !UnityEditor.SceneManagement.EditorSceneManager.SaveOpenScenes())
+                            return new ErrorResponse($"Could not save {string.Join(", ", dirty)}; the editor stays open.");
+                        AssetDatabase.SaveAssets();
+                    }
+                    EditorApplication.delayCall += () => EditorApplication.Exit(0);
+                    return new SuccessResponse("The editor is closing.", new { saved = save ? dirty : new System.Collections.Generic.List<string>() });
+                }
                 case "redo":
                 {
                     Undo.PerformRedo();
@@ -243,7 +267,7 @@ namespace ForgeMCP.Editor.Tools
 
                 default:
                     return new ErrorResponse(
-                        $"Unknown action: '{action}'. Supported actions: play, get_play_mode_startup, pause, stop, set_active_tool, add_tag, remove_tag, add_layer, remove_layer, deploy_package, restore_package, undo, redo. For prefab editing (open/save/close prefab stage), use manage_prefabs. Use MCP resources for reading editor state, project info, tags, layers, selection, windows, prefab stage, and active tool."
+                        $"Unknown action: '{action}'. Supported actions: play, get_play_mode_startup, pause, stop, quit, set_active_tool, add_tag, remove_tag, add_layer, remove_layer, deploy_package, restore_package, undo, redo. For prefab editing (open/save/close prefab stage), use manage_prefabs. Use MCP resources for reading editor state, project info, tags, layers, selection, windows, prefab stage, and active tool."
                     );
             }
         }

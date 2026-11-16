@@ -174,6 +174,7 @@ class UnityInstanceMiddleware(Middleware):
                             id=f"{project}@{hash_value}",
                             hash=hash_value,
                             name=project,
+                            project_path=getattr(session_info, "project_path", None),
                         ))
             except Exception as exc:
                 if isinstance(exc, (SystemExit, KeyboardInterrupt)):
@@ -200,6 +201,7 @@ class UnityInstanceMiddleware(Middleware):
           - Bare port number like "6401" (stdio only) -> resolved Name@hash
           - "Name@hash" exact match
           - Hash prefix (unique prefix match against running instances)
+          - The project's folder (an absolute path) -> the instance that has it open
 
         Raises ValueError with a user-friendly message on failure.
         """
@@ -230,6 +232,20 @@ class UnityInstanceMiddleware(Middleware):
             )
 
         instances = await self._discover_instances(ctx)
+
+        # A project's folder: the instance whose project root it is.
+        if "/" in value or "\\" in value:
+            from services.unity_projects import normalize
+            wanted = normalize(value)
+            for inst in instances:
+                path = getattr(inst, "project_path", None)
+                if path and normalize(path) == wanted:
+                    return inst.id
+            raise ValueError(
+                f"No connected Unity instance has '{value}' open. "
+                "manage_projects action='open' opens it; mcpforunity://instances lists those connected."
+            )
+
         ids = {
             getattr(inst, "id", None): inst
             for inst in instances

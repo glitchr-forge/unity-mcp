@@ -553,6 +553,7 @@ def create_mcp_server(project_scoped_tools: bool) -> FastMCP:
                         "project": details.project,
                         "hash": details.hash,
                         "unity_version": details.unity_version,
+                        "project_path": details.project_path,
                         "connected_at": details.connected_at,
                     })
                 return JSONResponse({"success": True, "instances": instances})
